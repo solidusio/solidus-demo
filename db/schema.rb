@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_13_174279) do
+ActiveRecord::Schema.define(version: 2020_03_14_092732) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -1070,28 +1070,37 @@ ActiveRecord::Schema.define(version: 2020_03_13_174279) do
   end
 
   create_table "spree_users", force: :cascade do |t|
-    t.string "crypted_password", limit: 128
-    t.string "salt", limit: 128
+    t.string "encrypted_password", limit: 128
+    t.string "password_salt", limit: 128
     t.string "email"
     t.string "remember_token"
-    t.string "remember_token_expires_at"
     t.string "persistence_token"
-    t.string "single_access_token"
+    t.string "reset_password_token"
     t.string "perishable_token"
-    t.integer "login_count", default: 0, null: false
-    t.integer "failed_login_count", default: 0, null: false
+    t.integer "sign_in_count", default: 0, null: false
+    t.integer "failed_attempts", default: 0, null: false
     t.datetime "last_request_at"
-    t.datetime "current_login_at"
-    t.datetime "last_login_at"
-    t.string "current_login_ip"
-    t.string "last_login_ip"
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
     t.string "login"
     t.integer "ship_address_id"
     t.integer "bill_address_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "openid_identifier"
     t.string "spree_api_key", limit: 48
+    t.string "authentication_token"
+    t.string "unlock_token"
+    t.datetime "locked_at"
+    t.datetime "remember_created_at"
+    t.datetime "reset_password_sent_at"
+    t.datetime "deleted_at"
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.index ["deleted_at"], name: "index_spree_users_on_deleted_at"
+    t.index ["email"], name: "email_idx_unique", unique: true
     t.index ["spree_api_key"], name: "index_spree_users_on_spree_api_key"
   end
 
