@@ -6,4 +6,5 @@
  *= require spree/frontend
  *= require_self
  *= require_tree .
+ *= require spree/shared/bootstrap_import
 */

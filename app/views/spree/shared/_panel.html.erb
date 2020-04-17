@@ -1,0 +1,28 @@
+<button type="button" class="btn btn-primary" id="panel-button" data-toggle="modal" data-target="#panelModal">
+  ?
+</button>
+
+<div class="modal fade" id="panelModal" tabindex="-1" role="dialog" aria-labelledby="panelModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><%="#{controller_name.upcase} #{action_name}".titleize%></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <% section = $admin ? "backend" : "frontend" %>
+        <%= PANEL_TEXT.dig section, controller_name, action_name %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <% if $admin %>
+          <a href="/" type="button" class="btn btn-primary">Go To Frontend</a>
+        <% else %>
+          <a href="/admin" type="button" class="btn btn-primary">Go To Backend</a>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

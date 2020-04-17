@@ -1,0 +1,12 @@
+#info-panel{
+  display:none;
+  position:fixed;
+  margin-right:auto;
+  margin-left:auto;
+}
+#panel-button{
+  position:fixed;
+  bottom:10px;
+  right:10px;
+  z-index:99999;
+}

@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the repo for the Solidus Demo Site.
 
-Things you may want to cover:
+## Authentication
 
-* Ruby version
+Currently, every request is assumed to have come from an admin user. (see `lib/spree/core/controller_helpers/auth_decorator.rb` for more info)
 
-* System dependencies
+This allows access to the backend without the need to log in, allowing potential adopters to get a better look at what they'll be working with.
 
-* Configuration
+## Database Changes
 
-* Database creation
+Database changes are forbidden on the backend, to prevent shenanigans. Currently, an `ActiveRecord::RecordInvalid` error is thrown upon any kind of database change.
 
-* Database initialization
+## Info Panel
 
-* How to run the test suite
+The application contains an info panel on every page (bottom right) containing information about the page they are currently on, and helpful buttons for navigating the website.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Page information is stored in `lib/panel.yml`. This data is loaded on server start, so you'll need to restart your server to see any changes. Text is currently stored first by section (frontend or backend), then by controller name (`orders` or `products`), then by action name (`show` or `index`). We may want to increase the granularity here depending on our needs going forward.

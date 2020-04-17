@@ -7,4 +7,7 @@
 //= require jquery
 //= require rails-ujs
 //= require spree/backend
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
 //= require_tree .

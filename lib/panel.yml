@@ -1,0 +1,12 @@
+backend:
+  orders:
+    index: "A list of all orders. Click some buttons!"
+    show: "This is an individual order."
+  products:
+    index: "A list of all products. From here you can delete, create, edit, or search for products."
+frontend:
+  home:
+    index: "This is the home page."
+  products:
+    show: "This is the product show page. The best part of this page is x,y,z and it _really_ makes you want to adopt Solidus."
+    index: "This is products index! And you should only see this message on frontend."
