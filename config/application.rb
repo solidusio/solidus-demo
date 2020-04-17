@@ -30,7 +30,7 @@ module SolidusSample
     Dir.glob(File.join(File.dirname(__FILE__), "../lib/**/*.rb")) do |c|
       ActiveSupport::Dependencies.require_or_load(File.expand_path(c))
     end
-    
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
