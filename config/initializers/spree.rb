@@ -60,7 +60,7 @@ Spree.config do |config|
   # )
 end
 
-Spree::Frontend::Config.configure do |config|
+SolidusStarterFrontend::Config.configure do |config|
   config.locale = 'en'
 end
 

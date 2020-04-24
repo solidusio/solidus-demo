@@ -7,4 +7,5 @@
  *= require_self
  *= require_tree .
  *= require spree/shared/bootstrap_import
+ *= require spree/frontend/solidus_starter_frontend
 */

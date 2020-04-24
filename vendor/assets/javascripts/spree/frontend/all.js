@@ -11,3 +11,4 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require_tree .
+//= require spree/frontend/solidus_starter_frontend
