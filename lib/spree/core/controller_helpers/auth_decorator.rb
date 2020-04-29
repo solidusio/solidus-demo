@@ -7,7 +7,6 @@ Spree::Core::ControllerHelpers::Auth.class_eval do
   def try_spree_current_user
     Spree::User.new(
       spree_roles: Spree::Role.where(name:"admin"),
-      id:1,
       email: "test@solidus.io"
     )
   end
