@@ -13,7 +13,7 @@
       </div>
       <div class="modal-body">
         <% section = $admin ? "backend" : "frontend" %>
-        <%= PANEL_TEXT.dig section, controller_name, action_name %>
+        <%= simple_format(PANEL_TEXT.dig section, controller_name, action_name) %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
