@@ -1,0 +1,31 @@
+<div class="tour-widget <%= "open" if params[:guided_tour] %>">
+  <% section = $admin ? "backend" : "frontend" %>
+  <% tour_text = TOUR_TEXT.dig(section, controller_name, action_name) || [] %>
+  <% tour_text.each_with_index do |(name,val),index| %>
+    <div class="tour-body <%= name %>" style="<%= index == 0 ? '' : 'display:none;'%>">
+      <% if val["button_action"] == "next" %>
+        <div class="tour-button btn btn-secondary tour-next">
+          Next
+        </div>
+      <% else %>
+        <div class="tour-button btn btn-primary">
+          <a href="<%= val['button_location'] %>?guided_tour=true">
+            Continue
+          </a>
+        </div>
+      <% end %>
+
+      <div class="tour-inner">
+        <div class="tour-title"><%= val["title"] %></div>
+        <div class="tour-text"><%= val["body_text"] %> </div>
+      </div>
+
+      <div class="tour-whitebox" data-selector="<%= val['selector'] %>"></div>
+    </div>
+  <% end %>
+
+
+  <div class="tour-toggler">
+    <div class="tour-toggler-box">Guided Tour</div>
+  </div>
+</div>
