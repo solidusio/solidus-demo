@@ -8,11 +8,11 @@
           Next
         </div>
       <% else %>
-        <div class="tour-button btn btn-primary">
-          <a href="<%= val['button_location'] %>?guided_tour=true">
-            Continue
-          </a>
-        </div>
+        <a href="<%= val['button_location'] %>?guided_tour=true">
+          <div class="tour-button btn btn-primary">
+              Continue
+          </div>
+        </a>
       <% end %>
 
       <div class="tour-inner">
@@ -26,6 +26,10 @@
 
 
   <div class="tour-toggler">
-    <div class="tour-toggler-box">Guided Tour</div>
+    <div class="tour-toggler-box">
+      <div class="tour-toggler-text">
+        Guided Tour
+      </div>
+    </div>
   </div>
 </div>
