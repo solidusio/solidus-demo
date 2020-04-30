@@ -1,7 +1,7 @@
 frontend:
   home:
     index:
-      taxon_menu:
+      taxon_menu: #TOUR STARTS HERE
         button_action: next #use "next" when there are more than one items on the same page
         title: Taxon Menu
         body_text: This is the taxon menu, look how whiteboxed it is.
