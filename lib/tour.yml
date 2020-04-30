@@ -1,0 +1,22 @@
+frontend:
+  home:
+    index:
+      taxon_menu:
+        button_action: next #use "next" when there are more than one items on the same page
+        title: Taxon Menu
+        body_text: This is the taxon menu, look how whiteboxed it is.
+        selector: .categories
+      search_bar:
+        button_action: continue #continue goes to the next page
+        button_location: /products #where the button goes
+        title: Search Bar
+        body_text: This is the search bar. See how shiny it is?
+        selector: .search-bar
+  products:
+    index:
+      taxon_selector:
+        button_action: continue
+        button_location: /products/solidus-t-shirt
+        title: Taxon Selector
+        body_text: This is the taxon selector, allowing users to select a taxon to filter your products by.
+        selector: .taxonomies

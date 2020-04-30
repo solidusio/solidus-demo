@@ -1,0 +1,73 @@
+.tour-widget .tour-body{
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.4s ease;
+  color:#fff;
+}
+.tour-widget{
+  transition: background-color 0.5s;
+}
+.tour-widget.open{
+  background-color:#24282f;
+}
+.tour-inner{
+  padding:5px;
+}
+.tour-text{
+  padding:20px;
+}
+.tour-title{
+  font-size:20px;
+}
+.tour-button{
+  float:right;
+  margin:20px;
+}
+.tour-widget.open .tour-body{
+  height: 70px !important;
+}
+.tour-toggler{
+  height:20px;
+  width:100%;
+  padding:30px;
+  cursor:pointer;
+}
+.tour-toggler-box:hover{
+  border-color:black;
+}
+.tour-widget.open .tour-toggler-box{
+  transform: rotate(135deg);
+  color: transparent;
+  border-color:white;
+}
+.tour-toggler-box{
+  padding:10px;
+  height:20px;
+  width: 20px;
+  border-bottom: gray solid 2px;
+  border-left: gray solid 2px;
+  margin-left: auto;
+  margin-right: auto;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+}
+.tour-target{
+  z-index: 9999999;
+  background-color: white;
+  position: relative;
+}
+.tour-widget.open .tour-whitebox{
+  top: 130px;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #00000099;
+  z-index: 999999;
+}
+body{
+  position:relative;
+}
+.tour-button a{
+  text-decoration:none;
+}

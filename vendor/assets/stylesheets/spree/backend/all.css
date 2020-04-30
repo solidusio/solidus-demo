@@ -7,4 +7,5 @@
  *= require_self
  *= require_tree .
  *= require spree/shared/bootstrap_import
+ *= require guided_tour
 */
