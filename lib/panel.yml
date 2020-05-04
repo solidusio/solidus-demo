@@ -1,136 +1,121 @@
-backend:
-  orders:
-    index: |+
-      This is the order index page.
+orders:
+  index: |+
+    This is the order index page.
 
-      You can navigate through all completed orders on this page using the pagination controls provided below.
+    You can navigate through all completed orders on this page using the pagination controls provided below.
 
-      You can also use the filters to find the exact order you are looking for, using information like order number, email, date range, or status.
+    You can also use the filters to find the exact order you are looking for, using information like order number, email, date range, or status.
 
-      You can also see customers carts by unchecking "Only Show Completed Orders"
+    You can also see customers carts by unchecking "Only Show Completed Orders"
 
-      If you need to create a new order, you can do so using the "New Order" button at the top right of the page.
-    edit: |+
-      This is the order shipment page.
+    If you need to create a new order, you can do so using the "New Order" button at the top right of the page.
+  edit: |+
+    This is the order shipment page.
 
-      You can see the shipments of an order and their status from this page.
+    You can see the shipments of an order and their status from this page.
 
-      For unshipped orders, you can adjust what stock items are getting shipped in each shipment by using the "transfer" and "delete" buttons next to each line item. When the shipment is ready to go, you can click "Ship" to ship the package.
+    For unshipped orders, you can adjust what stock items are getting shipped in each shipment by using the "transfer" and "delete" buttons next to each line item. When the shipment is ready to go, you can click "Ship" to ship the package.
 
-      At the top right, you have buttons for marking the order as approved, cancelling the order, or you can use the "resent" button to resend the order confirmation email to the user.
-    cart: TODO admin cart
-  products:
-    index: TODO A list of all products. From here you can delete, create, edit, or search for products.
-    edit: TODO product edit
-  images:
-    index: TODO product image page
-    edit: TODO product edit page
-  variants:
-    index: TODO
-    edit: TODO
-    new: TODO
-  prices:
-    index: TODO
-    edit: TODO
-    new: TODO
-  product_properties:
-    index: TODO
-  stock_items:
-    index: TODO
-  option_types:
-    index: TODO
-  properties:
-    index: TODO
-    edit: TODO
-  taxonomies:
-    index: TODO
-    new: TODO
-    edit: TODO
-  taxons:
-    index: TODO display order
-  promotions:
-    index: TODO
-    new: TODO
-    edit: TODO
-  promotion_categories:
-    index: TODO
-    new: TODO
-  users:
-    index: TODO
-    new: TODO
-    edit: TODO
-  stores:
-    edit: TODO
-    new: TODO
-  payment_methods:
-    edit: TODO
-    index: TODO
-    new: TODO
-  tax_categories:
-    index: TODO
-    edit: TODO
-    new: TODO
-  tax_rates:
-    index: TODO
-    edit: TODO
-    new: TODO
-  refund_reasons:
-    index: TODO
-    new: TODO
-  reimbursement_types:
-    index: TODO
-  rma_reasons:
-    index: TODO
-    edit: TODO
-    new: TODO
-  adjustment_reasons:
-    index: TODO
-    edit: TODO
-    new: TODO
-  store_credit_reasons:
-    index: TODO
-    edit: TODO
-    new: TODO
-  shipping_methods:
-    index: TODO
-    edit: TODO
-    new: TODO
-  stock_movements:
-    index: TODO - a rather obscure page but one we should index anyway! /admin/stock_locations/1/stock_movements
-  shipping_categories:
-    index: TODO
-    edit: TODO
-    new: TODO
-  stock_locations:
-    index: TODO
-    edit: TODO
-    new: TODO
-  customer_details:
-    edit: TODO customer details
-  adjustments:
-    index: TODO order adjustments show
-    new: TODO create new adjustments
-  payments:
-    index: TODO order payments index
-    new: TODO new payment
-  return_authorizations:
-    index: TODO return authorizations page #also need entries for new and edit
-  customer_returns:
-    index: TODO CR index page
-    edit: TODO CR edit page
-  cancellations:
-    index: TODO cancellations page
-frontend:
-  home:
-    index: TODO This is the home page.
-  taxons:
-    show: TODO Taxon show page
-  products:
-    show: TODO This is the product show page. The best part of this page is x,y,z and it _really_ makes you want to adopt Solidus.
-    index: TODO This is products index - used as the search view and the full catalog view. Potentially confusing!
-  orders:
-    edit: TODO The cart page
-  checkout:
-    edit: TODO All of the checkout steps. Potentially confusing! Maybe introduce more granularity here to break out each checkout step?
-  user_sessions:
-    new: TODO Login page #is this even going to show up in the final version? Maybe it would be better to just show the account page.
+    At the top right, you have buttons for marking the order as approved, cancelling the order, or you can use the "resent" button to resend the order confirmation email to the user.
+  cart: TODO admin cart
+products:
+  index: TODO A list of all products. From here you can delete, create, edit, or search for products.
+  edit: TODO product edit
+images:
+  index: TODO product image page
+  edit: TODO product edit page
+variants:
+  index: TODO
+  edit: TODO
+  new: TODO
+prices:
+  index: TODO
+  edit: TODO
+  new: TODO
+product_properties:
+  index: TODO
+stock_items:
+  index: TODO
+option_types:
+  index: TODO
+properties:
+  index: TODO
+  edit: TODO
+taxonomies:
+  index: TODO
+  new: TODO
+  edit: TODO
+taxons:
+  index: TODO display order
+promotions:
+  index: TODO
+  new: TODO
+  edit: TODO
+promotion_categories:
+  index: TODO
+  new: TODO
+users:
+  index: TODO
+  new: TODO
+  edit: TODO
+stores:
+  edit: TODO
+  new: TODO
+payment_methods:
+  edit: TODO
+  index: TODO
+  new: TODO
+tax_categories:
+  index: TODO
+  edit: TODO
+  new: TODO
+tax_rates:
+  index: TODO
+  edit: TODO
+  new: TODO
+refund_reasons:
+  index: TODO
+  new: TODO
+reimbursement_types:
+  index: TODO
+rma_reasons:
+  index: TODO
+  edit: TODO
+  new: TODO
+adjustment_reasons:
+  index: TODO
+  edit: TODO
+  new: TODO
+store_credit_reasons:
+  index: TODO
+  edit: TODO
+  new: TODO
+shipping_methods:
+  index: TODO
+  edit: TODO
+  new: TODO
+stock_movements:
+  index: TODO - a rather obscure page but one we should index anyway! /admin/stock_locations/1/stock_movements
+shipping_categories:
+  index: TODO
+  edit: TODO
+  new: TODO
+stock_locations:
+  index: TODO
+  edit: TODO
+  new: TODO
+customer_details:
+  edit: TODO customer details
+adjustments:
+  index: TODO order adjustments show
+  new: TODO create new adjustments
+payments:
+  index: TODO order payments index
+  new: TODO new payment
+return_authorizations:
+  index: TODO return authorizations page #also need entries for new and edit
+customer_returns:
+  index: TODO CR index page
+  edit: TODO CR edit page
+cancellations:
+  index: TODO cancellations page

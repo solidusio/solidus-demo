@@ -12,16 +12,10 @@
         </button>
       </div>
       <div class="modal-body">
-        <% section = $admin ? "backend" : "frontend" %>
-        <%= simple_format(PANEL_TEXT.dig section, controller_name, action_name) %>
+        <%= simple_format(PANEL_TEXT.dig controller_name, action_name) %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <% if $admin %>
-          <a href="/" type="button" class="btn btn-primary">Go To Frontend</a>
-        <% else %>
-          <a href="/admin" type="button" class="btn btn-primary">Go To Backend</a>
-        <% end %>
       </div>
     </div>
   </div>
