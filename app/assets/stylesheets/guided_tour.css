@@ -13,7 +13,10 @@
   padding:5px;
 }
 .tour-text{
-  padding:20px;
+  padding-left:20px;
+  font-size:small;
+  height:60px;
+  overflow-x:scroll;
 }
 .tour-title{
   font-size:20px;
@@ -23,14 +26,14 @@
   margin:20px;
 }
 .tour-toggler-text{
-  margin-top:-1.2em;
+  color:white;
 }
 .tour-widget.open .tour-body{
-  height: 70px !important;
+  height: 90px !important;
 }
 .tour-toggler{
   width:100%;
-  padding:30px;
+  padding:15px;
   cursor:pointer;
   background-color:#24282f;
   margin-bottom:10px;
@@ -41,7 +44,10 @@
 }
 .tour-widget.open .tour-toggler-box{
   transform: rotate(135deg);
-  color: transparent;
+}
+.tour-widget.open .tour-toggler-text{
+  transform: rotate(180deg);
+  color:transparent;
 }
 .tour-toggler-box{
   padding:10px;
@@ -52,6 +58,11 @@
   margin-left: auto;
   margin-right: auto;
   transform: rotate(-45deg);
+  transition: 0.5s;
+  color:white;
+}
+.tour-toggler-text{
+  text-align:center;
   transition: 0.5s;
   color:white;
 }
@@ -76,4 +87,12 @@ body{
 .tour-button{
   padding:15px;
   text-decoration:none;
+}
+/* Keeps the admin styling in line with the tour */
+/* The sidebar makes this difficult */
+.admin-nav-hidden .admin-nav-header{
+  width:52px !important;
+}
+.admin-nav-hidden .main-header{
+  margin-left:0 !important;
 }

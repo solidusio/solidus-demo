@@ -1,22 +1,80 @@
 frontend:
   home:
     index:
-      taxon_menu: #TOUR STARTS HERE
+      solidus_guided_tour: #Title of the section of the tour - not displayed to user
         button_action: next #use "next" when there are more than one items on the same page
+        title: Solidus Guided Tour #The user-visible tour title
+        body_text: |+
+          Welcome to the Solidus Guided Tour. We'll take you through some of what we think makes Solidus special.
+
+          Buckle up and get ready, and click the "Next" button on the right to begin!
+      taxon_menu:
+        button_action: continue
+        button_location: /t/brand/solidus
         title: Taxon Menu
-        body_text: This is the taxon menu, look how whiteboxed it is.
-        selector: .categories
-      search_bar:
-        button_action: continue #continue goes to the next page
-        button_location: /products #where the button goes
-        title: Search Bar
-        body_text: This is the search bar. See how shiny it is?
-        selector: .search-bar
-  products:
-    index:
-      taxon_selector:
+        selector: .categories #The selector for the object that will be highlighted
+        body_text: |+
+          We'll start with the navbar. Our default frontend automatically uses your taxonomy structure to create what you see here.
+
+          While that's easy to manage, maybe you want to handle your navbar differently. Solidus prides itself on being infinitely extensible, so if you'd rather change what's displayed here - or even hardcode it in - it's all gravy, baby.
+  taxons:
+    show:
+      filtering:
         button_action: continue
         button_location: /products/solidus-t-shirt
-        title: Taxon Selector
-        body_text: This is the taxon selector, allowing users to select a taxon to filter your products by.
-        selector: .taxonomies
+        title: Taxon Filtering
+        selector: aside
+        body_text: |+
+          Diving more into the taxonomy, here's our filtering setup. From this widget, you can filter by any number of things - here, we've got price & category, and brands, but with minimal setup you can filter by whatever attributes you want.
+  products:
+    show:
+      product_properties:
+        button_action: next
+        title: Product Properties
+        selector: .product-properties
+        body_text: |+
+          Each product is special, and we wanted to give you an easy way to show them off. Here's where you can list out any relevant properties that the customer might want to see.
+
+          You can adjust these easily on the admin side, we'll show that to you later.
+      variant_selector:
+        button_action: next
+        title: Variants
+        selector: .product-variants
+        body_text: |+
+          Variants are a great way to give your customers options, so we made it as simple as possible to create & manage as many variants as you need.
+      images:
+        button_action: continue
+        button_location: /products?utf8=✓&taxon=&keywords=solidus
+        title: Product Images
+        selector: .product-page__images
+        body_text: |+
+          You want to show off your product, and your customers want to see what they'll receive. With Solidus, managing & storing your product images is simple.
+    index:
+      search_bar:
+        button_action: continue
+        button_location: /admin/orders
+        title: Search Bar
+        selector: .search-bar
+        body_text: |+
+          For the customers that know exactly what they're looking for, Solidus comes with a robust search feature out-of-the-box. Just like on a category page, you can filter through search results by any number of properties.
+backend:
+  orders:
+    index:
+      introduction:
+        button_action: next
+        title: Solidus Admin
+        body_text: |+
+          Behold, this is the Solidus admin UI.
+
+          On the left, you'll see the main navigation bar. There you'll find all the resources you'll need to manage your E-Commerce store. You can even minimize the bar to make it less obtrusive.
+      filtering:
+        button_action: continue
+        button_location: /admin/orders/R987654321/edit
+        title: Filtering
+        selector: "#table-filter"
+        body_text: |+
+          This is the order index page. You'll see a list of completed orders here, with some handy tools for finding the right one.
+
+          Highlighted below is the filtering menu, where you can use properties like order number, completed date, or order status to find the orders that you're looking for.
+
+          If you want to see user carts instead, you can uncheck "Only show completed orders".

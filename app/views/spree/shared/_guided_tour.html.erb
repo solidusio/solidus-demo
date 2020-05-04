@@ -4,11 +4,11 @@
   <% tour_text.each_with_index do |(name,val),index| %>
     <div class="tour-body <%= name %>" style="<%= index == 0 ? '' : 'display:none;'%>">
       <% if val["button_action"] == "next" %>
-        <div class="tour-button btn btn-secondary tour-next">
+        <div class="tour-button btn btn-primary tour-next">
           Next
         </div>
       <% else %>
-        <a href="<%= val['button_location'] %>?guided_tour=true">
+        <a href="<%= val['button_location'] %><%= val['button_location'].include?('?') ? '&' : '?' %>guided_tour=true">
           <div class="tour-button btn btn-primary">
               Continue
           </div>
@@ -17,7 +17,7 @@
 
       <div class="tour-inner">
         <div class="tour-title"><%= val["title"] %></div>
-        <div class="tour-text"><%= val["body_text"] %> </div>
+        <div class="tour-text"><%= simple_format(val["body_text"]) %> </div>
       </div>
 
       <div class="tour-whitebox" data-selector="<%= val['selector'] %>"></div>
@@ -26,10 +26,10 @@
 
 
   <div class="tour-toggler">
+    <div class="tour-toggler-text">
+      Guided Tour
+    </div>
     <div class="tour-toggler-box">
-      <div class="tour-toggler-text">
-        Guided Tour
-      </div>
     </div>
   </div>
 </div>
