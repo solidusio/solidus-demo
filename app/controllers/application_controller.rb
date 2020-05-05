@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 
   def set_request
     $admin = request.path.include? "/admin"
+    $api = request.path.include? "/api"
   end
 
 end
