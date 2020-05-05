@@ -78,3 +78,58 @@ backend:
           Highlighted below is the filtering menu, where you can use properties like order number, completed date, or order status to find the orders that you're looking for.
 
           If you want to see user carts instead, you can uncheck "Only show completed orders".
+    edit:
+      controls:
+        button_action: next
+        title: Order Controls
+        selector: .main-header
+        body_text: |+
+          Now we're going to look at an individual order. At the top of the page are some controls for cancelling, approving, or resending the order confirmation.
+      navigation:
+        button_action: next
+        title: Navigation
+        selector: .tabs
+        body_text: |+
+          This is where you can navigate to different sections of the order, such as payments or returns.
+      order_info:
+        button_action: next
+        title: Order Information
+        selector: .content-sidebar
+        body_text: |+
+          In order to have the full picture when working with the order, we have an order information panel that displays relevant order information.
+      shipment:
+        button_action: continue
+        button_location: /admin/orders/R987654321/customer/edit
+        title: Shipments
+        selector: .js-shipment-edit
+        body_text: |+
+          Finally, here's where you can see what was ordered by the customer, as well as any relevant details such as shipping cost or tracking information.
+
+          When the order is paid and the inventory is in stock, you'll also be able to use this page to mark the order as shipped.
+  customer_details:
+    edit:
+      customer_details:
+        button_action: continue
+        button_location: /admin/orders/R987654321/adjustments
+        title: Customer Details
+        selector: .js-customer-details
+        body_text: |+
+          Here you can see details for the customer that placed the order, such as shipping and billing address.
+  adjustments:
+    index:
+      adjustments:
+        button_action: continue
+        button_location: /admin/orders/R987654321/payments
+        title: Adjustments
+        selector: .index.adjustments
+        body_text: |+
+          If you want to view, adjust, delete, or create any adjustments on the order, this is the place to do it. You can also see a tax breakdown by item.
+  payments:
+    index:
+      payments:
+        button_action: continue
+        button_location: /admin/products
+        title: Payments
+        selector: "#payments"
+        body_text: |+
+          On the payments page, you can approve or deny any pending payments, or provide refunds to your customer.
