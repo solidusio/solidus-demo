@@ -26,6 +26,16 @@
     </div>
   <% end %>
 
+  <% if tour_text == [] %>
+    <div class="tour-body">
+      <a href="/">
+        <div class="tour-button btn btn-primary">
+          Start Guided Tour
+        </div>
+      </a>
+      <div class="tour-whitebox"></div>
+    </div>
+  <% end %>
 
   <div class="tour-toggler">
     <div class="tour-toggler-text">
