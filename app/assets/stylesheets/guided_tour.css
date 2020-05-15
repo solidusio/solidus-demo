@@ -16,7 +16,7 @@
   padding-left:20px;
   font-size:small;
   height:60px;
-  overflow-x:scroll;
+  overflow:auto;
 }
 .tour-title{
   font-size:20px;
