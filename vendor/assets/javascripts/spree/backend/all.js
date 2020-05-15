@@ -11,3 +11,4 @@
 //= require bootstrap-sprockets
 //= require_tree .
 //= require guided_tour
+//= require spree/backend/solidus_user_guides

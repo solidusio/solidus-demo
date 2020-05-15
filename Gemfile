@@ -19,6 +19,7 @@ gem 'solidus_api'
 gem 'solidus_backend'
 gem 'solidus_sample'
 gem "solidus_starter_frontend", git: 'https://github.com/nebulab/solidus_starter_frontend'
+gem "solidus_user_guides", git: 'https://github.com/seand7565/solidus_user_guides'
 gem 'solidus_auth_devise'
 
 # Use rspec for testing

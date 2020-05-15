@@ -12,3 +12,4 @@
 //= require_tree .
 //= require spree/frontend/solidus_starter_frontend
 //= require guided_tour
+//= require spree/frontend/solidus_user_guides

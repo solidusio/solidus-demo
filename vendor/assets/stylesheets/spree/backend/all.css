@@ -8,4 +8,5 @@
  *= require_tree .
  *= require spree/shared/bootstrap_import
  *= require guided_tour
+ *= require spree/backend/solidus_user_guides
 */
