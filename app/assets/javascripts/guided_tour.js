@@ -1,4 +1,7 @@
 $(document).ready(function(){
+  // Shows the widget on page load, to prevent the widget text from being
+  // displayed unformatted
+  $(".tour-widget").show()
   // Toggles the tour on click of the tour button
   $(".tour-toggler").click(toggleTour)
   // Disables tour when you click on the whitebox

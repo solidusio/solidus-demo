@@ -1,4 +1,4 @@
-<div class="tour-widget <%= "open" if params[:guided_tour] %>">
+<div style="display:none;" class="tour-widget <%= "open" if params[:guided_tour] %>">
   <% section = $admin ? "backend" : "frontend" %>
   <% tour_text = TOUR_TEXT.dig(section, controller_name, action_name) || [] %>
   <% tour_text.each_with_index do |(name,val),index| %>
