@@ -1,4 +1,4 @@
-Spree::Api::BaseController.class_eval do
+module Spree::Api::BaseControllerDecorator
   def load_user
     @current_api_user ||= Spree::User.new(
         spree_roles: Spree::Role.where(name:"admin"),
@@ -11,3 +11,5 @@ Spree::Api::BaseController.class_eval do
     true
   end
 end
+
+Spree::Api::BaseController.prepend Spree::Api::BaseControllerDecorator
