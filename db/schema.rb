@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_09_093353) do
+ActiveRecord::Schema.define(version: 2020_06_19_194243) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -776,6 +776,13 @@ ActiveRecord::Schema.define(version: 2020_06_09_093353) do
     t.index ["role_id"], name: "index_spree_roles_users_on_role_id"
     t.index ["user_id", "role_id"], name: "index_spree_roles_users_on_user_id_and_role_id", unique: true
     t.index ["user_id"], name: "index_spree_roles_users_on_user_id"
+  end
+
+  create_table "spree_sample_changes", force: :cascade do |t|
+    t.string "changeable_type"
+    t.integer "changeable_id"
+    t.json "changed_data"
+    t.string "sample_indicator_id"
   end
 
   create_table "spree_shipments", id: :serial, force: :cascade do |t|

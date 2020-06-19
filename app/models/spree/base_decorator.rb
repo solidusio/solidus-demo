@@ -5,6 +5,12 @@ module Spree::BaseDecorator
       before_update :verify_token
       before_destroy :verify_token
       default_scope { where("#{table_name}.sample_indicator_id = ? OR #{table_name}.sample_indicator_id IS null", $token) }
+
+      # Set the sample data attributes to equal the changed data
+      after_find do |user|
+        changeable = find_changeable
+        self.attributes = changeable.changed_data if changeable
+      end
     end
   end
 
@@ -13,13 +19,26 @@ module Spree::BaseDecorator
   end
 
   def verify_token
-    raise_sample_error unless sample_indicator_id?
+    apply_changes_to_changeable unless sample_indicator_id?
   end
 
   private
 
-  def raise_sample_error
-    raise("You can't edit pre-existing items - try creating a new one!")
+  # Apply changes to the changeable object instead of the sample object
+  def apply_changes_to_changeable
+    if changes.any?
+      changeable = find_changeable || Spree::SampleChanges.new(changeable_type: self.class.name, changeable_id: id)
+      changeable.changed_data = attributes
+      # This method on Stores does not play well with this ActiveRecord hackery
+      changeable.changed_data.delete("available_locales")
+      changeable.save
+      # Mark changes as already applied so the original object is unaffected
+      changes_applied
+    end
+  end
+
+  def find_changeable
+    Spree::SampleChanges.find_by(changeable_type: self.class.name, changeable_id: id)
   end
 
 end
