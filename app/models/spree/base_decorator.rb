@@ -3,7 +3,6 @@ module Spree::BaseDecorator
     base.class_eval do
       before_create :set_token
       before_update :verify_token
-      before_destroy :verify_token_for_destroy
       default_scope { where("#{table_name}.sample_indicator_id = ? OR #{table_name}.sample_indicator_id IS null", $token) }
 
       # Set the sample data attributes to equal the changed data
@@ -22,8 +21,8 @@ module Spree::BaseDecorator
     apply_changes_to_changeable unless sample_indicator_id?
   end
 
-  def verify_token_for_destroy
-    raise_destroy_error unless sample_indicator_id?
+  def destroy!
+    super if sample_indicator_id?
   end
 
   private
@@ -39,10 +38,6 @@ module Spree::BaseDecorator
       # Mark changes as already applied so the original object is unaffected
       changes_applied
     end
-  end
-
-  def raise_destroy_error
-    raise "You can't destroy sample data!"
   end
 
   def find_changeable
