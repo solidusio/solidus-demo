@@ -13,3 +13,4 @@
 //= require spree/frontend/solidus_starter_frontend
 //= require guided_tour
 //= require spree/frontend/solidus_user_guides
+//= require spree/frontend/solidus_paypal_commerce_platform

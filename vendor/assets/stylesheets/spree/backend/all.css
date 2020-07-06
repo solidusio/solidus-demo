@@ -9,4 +9,5 @@
  *= require spree/shared/bootstrap_import
  *= require guided_tour
  *= require spree/backend/solidus_user_guides
+ *= require spree/backend/solidus_paypal_commerce_platform
 */
