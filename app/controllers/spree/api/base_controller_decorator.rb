@@ -1,15 +1,18 @@
 module Spree::Api::BaseControllerDecorator
-  def load_user
-    @current_api_user ||= Spree::User.new(
-        spree_roles: Spree::Role.where(name:"admin"),
-        email: "test@solidus.io"
-      )
+  def self.prepended(base)
+    base.include CurrentUser
   end
 
-  def authenticate_user
-    # Yep, everything is fine here!
-    true
+  private
+
+  def load_user
+    @current_api_user = spree_current_user
   end
+
+  def current_api_user
+    @current_api_user ||= spree_current_user
+  end
+
+  Spree::Api::BaseController.prepend self
 end
 
-Spree::Api::BaseController.prepend Spree::Api::BaseControllerDecorator

@@ -1,3 +1,7 @@
 class Current < ActiveSupport::CurrentAttributes
-  attribute :token
+  attribute :user
+
+  def token
+    user&.spree_api_key
+  end
 end
