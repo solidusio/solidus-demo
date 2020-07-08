@@ -19,6 +19,7 @@ module Spree::BaseDecorator
 
   # Apply changes to the changeable object instead of the sample object
   def restore_changes
+    return unless Current.token # skip this when working in global mode
     return if sample_indicator_id? # skip if the current record is not global
     return unless changes.any? # no need to do anything if no changes are happening
 
