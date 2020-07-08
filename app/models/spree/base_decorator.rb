@@ -3,7 +3,7 @@ module Spree::BaseDecorator
     base.class_eval do
       before_create :set_token
       before_update :verify_token
-      default_scope { where("#{table_name}.sample_indicator_id = ? OR #{table_name}.sample_indicator_id IS null", Current.token) }
+      default_scope { where(sample_indicator_id: [nil, Current.token].uniq) }
 
       # Set the sample data attributes to equal the changed data
       after_find do |user|
