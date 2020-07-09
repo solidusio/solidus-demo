@@ -7,8 +7,10 @@ module Spree::BaseDecorator
 
       # Set the sample data attributes to equal the changed data
       after_find do |user|
-        sample_changes = find_sample_changes
-        self.attributes = sample_changes.changed_data if sample_changes
+        sample_changes = find_sample_changes or next
+        sample_changes.changed_data.each do |name, value|
+          self[name] = value
+        end
       end
     end
   end
