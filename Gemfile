@@ -23,6 +23,11 @@ gem "solidus_user_guides", git: 'https://github.com/seand7565/solidus_user_guide
 gem 'solidus_auth_devise'
 gem "solidus_paypal_commerce_platform", git: 'https://github.com/nebulab/solidus_paypal_commerce_platform'
 
+group :heroku do
+  gem 'cloudinary', '~> 1.11'
+  gem 'paperclip-cloudinary'
+end
+
 # Use rspec for testing
 gem 'rspec-rails'
 
