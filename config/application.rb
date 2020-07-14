@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module SolidusSample
+module SolidusDemo
   class Application < Rails::Application
     # Load application's model / class decorators
     initializer 'spree.decorators' do |app|
