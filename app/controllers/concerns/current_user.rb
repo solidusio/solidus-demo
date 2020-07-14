@@ -11,7 +11,7 @@ module CurrentUser
   private
 
   def spree_current_user
-    token = request.cookies["guest_token"]
+    token = cookies.signed[:guest_token]
     return Current.user if Current.token == token
 
     Current.user = Spree::LegacyUser.new(
