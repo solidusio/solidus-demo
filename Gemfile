@@ -20,7 +20,6 @@ gem 'solidus_backend'
 gem 'solidus_sample'
 gem "solidus_starter_frontend", git: 'https://github.com/nebulab/solidus_starter_frontend'
 gem "solidus_user_guides", git: 'https://github.com/seand7565/solidus_user_guides'
-gem 'solidus_auth_devise'
 gem "solidus_paypal_commerce_platform", git: 'https://github.com/nebulab/solidus_paypal_commerce_platform'
 
 group :heroku do
@@ -36,7 +35,7 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

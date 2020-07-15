@@ -3,12 +3,15 @@ module Spree::BaseDecorator
     base.class_eval do
       before_create :set_token
       before_update :restore_changes
+      before_destroy :preserve_global_records_from_destruction
       default_scope { where(sample_indicator_id: [nil, Current.token].uniq) }
 
       # Set the sample data attributes to equal the changed data
       after_find do |user|
-        sample_changes = find_sample_changes
-        self.attributes = sample_changes.changed_data if sample_changes
+        sample_changes = find_sample_changes or next
+        sample_changes.changed_data.each do |name, value|
+          self[name] = value
+        end
       end
     end
   end
@@ -34,8 +37,8 @@ module Spree::BaseDecorator
     changes_applied
   end
 
-  def destroy!
-    super if sample_indicator_id?
+  def preserve_global_records_from_destruction
+    raise CanCan::AccessDenied unless sample_indicator_id.present?
   end
 
   private
