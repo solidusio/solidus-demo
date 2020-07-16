@@ -95,3 +95,7 @@ Spree.user_class = "Spree::LegacyUser"
 # the class name:
 #
 # Spree::UserLastUrlStorer.rules << 'Spree::UserLastUrlStorer::Rules::AuthenticationRule'
+
+def (Spree::Config).pricing_options_class
+  SolidusDemo::PricingOptions
+end
