@@ -49,3 +49,9 @@ module Spree::BaseDecorator
 end
 
 Spree::Base.prepend Spree::BaseDecorator
+
+# For some reason PaymentMethod doesn't get the default scope:
+#
+# irb(main):014:0> Spree::Base.subclasses.reject{|c| c.default_scopes.inspect =~ /base_deco/}
+# => [Spree::PaymentMethod(id: integer, type: string, name: string, description: text, active: boolean, deleted_at: datetime, created_at: datetime, updated_at: datetime, auto_capture: boolean, preferences: text, preference_source: string, position: integer, available_to_users: boolean, available_to_admin: boolean, sample_indicator_id: string)]
+Spree::PaymentMethod.prepend Spree::BaseDecorator
