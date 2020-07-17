@@ -1,250 +1,248 @@
-frontend:
-  home:
-    index:
-      solidus_guided_tour: #Title of the section of the tour - not displayed to user
-        button_action: next #use "next" when there are more than one items on the same page
-        title: Solidus Guided Tour #The user-visible tour title
-        body_text: |+
-          Welcome to the Solidus Guided Tour. We'll take you through some of what we think makes Solidus special.
+spree/home:
+  index:
+    solidus_guided_tour: #Title of the section of the tour - not displayed to user
+      button_action: next #use "next" when there are more than one items on the same page
+      title: Solidus Guided Tour #The user-visible tour title
+      body_text: |+
+        Welcome to the Solidus Guided Tour. We'll take you through some of what we think makes Solidus special.
 
-          Buckle up and get ready, and click the "Next" button on the right to begin!
-      customize:
-        button_action: next
-        title: Fully Customizable
-        body_text: |+
-          First, we want to stress the most important feature of Solidus: It's fully, 100% customizable.
+        Buckle up and get ready, and click the "Next" button on the right to begin!
+    customize:
+      button_action: next
+      title: Fully Customizable
+      body_text: |+
+        First, we want to stress the most important feature of Solidus: It's fully, 100% customizable.
 
-          The frontend you're seeing is the pre-built, default frontend - but everything here can be tossed out and tweaked for even the most edge-case uses. It's not just encouraged - it's expected!
-      taxon_menu:
-        button_action: continue
-        button_location: /t/brand/solidus
-        title: Taxon Menu
-        selector: .categories #The selector for the object that will be highlighted
-        body_text: |+
-          But while we're here, let's take a look at the default frontend - starting with the navbar. It automatically uses your taxonomy structure to create what you see here, so you don't have to hardcode in these paths. Any changes you make to the taxonomy, are reflected immediately here.
+        The frontend you're seeing is the pre-built, default frontend - but everything here can be tossed out and tweaked for even the most edge-case uses. It's not just encouraged - it's expected!
+    taxon_menu:
+      button_action: continue
+      button_location: /t/brand/solidus
+      title: Taxon Menu
+      selector: .categories #The selector for the object that will be highlighted
+      body_text: |+
+        But while we're here, let's take a look at the default frontend - starting with the navbar. It automatically uses your taxonomy structure to create what you see here, so you don't have to hardcode in these paths. Any changes you make to the taxonomy, are reflected immediately here.
 
-          While that's easy to manage, maybe you want to handle your navbar differently. Solidus prides itself on being infinitely extensible, so if you'd rather change what's displayed here - or even hardcode it in - it's all good!
-  taxons:
-    show:
-      filtering:
-        button_action: continue
-        button_location: /products/solidus-t-shirt
-        title: Taxon Filtering
-        selector: aside
-        body_text: |+
-          Diving more into the taxonomy, here's our filtering setup. From this widget, you can filter by any number of things - here, we've got price & category, and brands, but with minimal setup you can filter by whatever attributes you want.
-  products:
-    show:
-      product_properties:
-        button_action: next
-        title: Product Properties
-        selector: .product-properties
-        body_text: |+
-          Each product is special, and we wanted to give you an easy way to show them off. Here's where you can list out any relevant properties that the customer might want to see.
-      variant_selector:
-        button_action: next
-        title: Variants
-        selector: .product-variants
-        body_text: |+
-          Variants are a great way to give your customers options, so we made it as simple as possible to create & manage as many variants as you need.
-      images:
-        button_action: continue
-        button_location: /products?utf8=✓&taxon=&keywords=solidus
-        title: Product Images
-        selector: .product-page__images
-        body_text: |+
-          You want to show off your product, and your customers want to see what they'll receive. With Solidus, managing & storing your product images is simple.
-    index:
-      search_bar:
-        button_action: continue
-        button_location: /admin/orders
-        title: Search Bar
-        selector: .search-bar
-        body_text: |+
-          For the customers that know exactly what they're looking for, Solidus comes with a robust search feature out-of-the-box. Just like on a category page, you can filter through search results by any number of properties.
+        While that's easy to manage, maybe you want to handle your navbar differently. Solidus prides itself on being infinitely extensible, so if you'd rather change what's displayed here - or even hardcode it in - it's all good!
+spree/taxons:
+  show:
+    filtering:
+      button_action: continue
+      button_location: /products/solidus-t-shirt
+      title: Taxon Filtering
+      selector: aside
+      body_text: |+
+        Diving more into the taxonomy, here's our filtering setup. From this widget, you can filter by any number of things - here, we've got price & category, and brands, but with minimal setup you can filter by whatever attributes you want.
+spree/products:
+  show:
+    product_properties:
+      button_action: next
+      title: Product Properties
+      selector: .product-properties
+      body_text: |+
+        Each product is special, and we wanted to give you an easy way to show them off. Here's where you can list out any relevant properties that the customer might want to see.
+    variant_selector:
+      button_action: next
+      title: Variants
+      selector: .product-variants
+      body_text: |+
+        Variants are a great way to give your customers options, so we made it as simple as possible to create & manage as many variants as you need.
+    images:
+      button_action: continue
+      button_location: /products?utf8=✓&taxon=&keywords=solidus
+      title: Product Images
+      selector: .product-page__images
+      body_text: |+
+        You want to show off your product, and your customers want to see what they'll receive. With Solidus, managing & storing your product images is simple.
+  index:
+    search_bar:
+      button_action: continue
+      button_location: /admin/orders
+      title: Search Bar
+      selector: .search-bar
+      body_text: |+
+        For the customers that know exactly what they're looking for, Solidus comes with a robust search feature out-of-the-box. Just like on a category page, you can filter through search results by any number of properties.
 
-          Now let's move on to the admin section!
-backend:
-  orders:
-    index:
-      introduction:
-        button_action: next
-        title: Solidus Admin
-        body_text: |+
-          Behold, this is the Solidus admin UI.
+        Now let's move on to the admin section!
+spree/admin/orders:
+  index:
+    introduction:
+      button_action: next
+      title: Solidus Admin
+      body_text: |+
+        Behold, this is the Solidus admin UI.
 
-          On the left, you'll see the main navigation bar. There you'll find all the resources you'll need to manage your E-Commerce store. You can even minimize the bar to make it less obtrusive.
-      filtering:
-        button_action: continue
-        button_location: /admin/orders/R987654321/edit
-        title: Filtering
-        selector: "#table-filter"
-        body_text: |+
-          This is the order index page. You'll see a list of completed orders here, with some handy tools for finding the right one.
+        On the left, you'll see the main navigation bar. There you'll find all the resources you'll need to manage your E-Commerce store. You can even minimize the bar to make it less obtrusive.
+    filtering:
+      button_action: continue
+      button_location: /admin/orders/R987654321/edit
+      title: Filtering
+      selector: "#table-filter"
+      body_text: |+
+        This is the order index page. You'll see a list of completed orders here, with some handy tools for finding the right one.
 
-          Highlighted below is the filtering menu, where you can use properties like order number, completed date, or order status to find the orders that you're looking for.
+        Highlighted below is the filtering menu, where you can use properties like order number, completed date, or order status to find the orders that you're looking for.
 
-          If you want to see user carts instead, you can uncheck "Only show completed orders".
-    edit:
-      controls:
-        button_action: next
-        title: Order Controls
-        selector: .main-header
-        body_text: |+
-          Now we're going to look at an individual order. Like most resource pages, at the top of the page are some controls for managing the resource. You can use these buttons to cancel the order, approve the order, or or even resend the order confirmation email.
-      navigation:
-        button_action: next
-        title: Navigation
-        selector: .tabs
-        body_text: |+
-          This is where you can navigate to different sections of the order, such as payments or returns.
-      order_info:
-        button_action: next
-        title: Order Information
-        selector: .content-sidebar
-        body_text: |+
-          In order to have the full picture when working with the order, we have an order information panel that displays relevant order information.
-      shipment:
-        button_action: continue
-        button_location: /admin/orders/R987654321/payments
-        title: Shipments
-        selector: .js-shipment-edit
-        body_text: |+
-          Finally, here's where you can see what was ordered by the customer, as well as any relevant details such as shipping cost or tracking information.
+        If you want to see user carts instead, you can uncheck "Only show completed orders".
+  edit:
+    controls:
+      button_action: next
+      title: Order Controls
+      selector: .main-header
+      body_text: |+
+        Now we're going to look at an individual order. Like most resource pages, at the top of the page are some controls for managing the resource. You can use these buttons to cancel the order, approve the order, or or even resend the order confirmation email.
+    navigation:
+      button_action: next
+      title: Navigation
+      selector: .tabs
+      body_text: |+
+        This is where you can navigate to different sections of the order, such as payments or returns.
+    order_info:
+      button_action: next
+      title: Order Information
+      selector: .content-sidebar
+      body_text: |+
+        In order to have the full picture when working with the order, we have an order information panel that displays relevant order information.
+    shipment:
+      button_action: continue
+      button_location: /admin/orders/R987654321/payments
+      title: Shipments
+      selector: .js-shipment-edit
+      body_text: |+
+        Finally, here's where you can see what was ordered by the customer, as well as any relevant details such as shipping cost or tracking information.
 
-          When the order is ready to be shipped, you'll be able to use this page to ship it.
-  payments:
-    index:
-      payments:
-        button_action: next
-        title: Payments
-        selector: "#payments"
-        body_text: |+
-          Payments are easy with Solidus. Your customers payments are displayed here, and you have the ability to capture, refund, or void those payments.
-      new_payment:
-        button_action: continue
-        button_location: /admin/products
-        title: New Payment
-        selector: "#new_payment_section"
-        body_text: |+
-          If you need to add a payment - for instance, if a customer wants to add an item after the order has been placed - new payments can be added using the New Payments button.
-  products:
-    index:
-      product_list:
-        button_action: continue
-        button_location: /admin/products/solidus-t-shirt/edit
-        title: Products
-        selector: "#wrapper"
-        body_text: |+
-          Moving on to products, here you'll find a list of all of the products on your store.
+        When the order is ready to be shipped, you'll be able to use this page to ship it.
+spree/admin/payments:
+  index:
+    payments:
+      button_action: next
+      title: Payments
+      selector: "#payments"
+      body_text: |+
+        Payments are easy with Solidus. Your customers payments are displayed here, and you have the ability to capture, refund, or void those payments.
+    new_payment:
+      button_action: continue
+      button_location: /admin/products
+      title: New Payment
+      selector: "#new_payment_section"
+      body_text: |+
+        If you need to add a payment - for instance, if a customer wants to add an item after the order has been placed - new payments can be added using the New Payments button.
+spree/admin/products:
+  index:
+    product_list:
+      button_action: continue
+      button_location: /admin/products/solidus-t-shirt/edit
+      title: Products
+      selector: "#wrapper"
+      body_text: |+
+        Moving on to products, here you'll find a list of all of the products on your store.
 
-          Let's move on to the edit page, so you can get a look at how products work in Solidus.
-    edit:
-      title_fields:
-        button_action: next
-        title: Editing a Product
-        selector: ".left.col-9"
-        body_text: |+
-          Here's the product edit page. Highlighted below are fields for Name, Description, and Slug. Slugs are created automatically and in a human readable format, but you can override that here if you wish.
-      side_fields:
-        button_acton: continue
-        button_location: /admin/products/solidus-t-shirt/images
-        title: Editing a Product
-        selector: ".right.col-3"
-        body_text: |+
-          The next section is where you can set things like price and weight. You can also assign tax and shipping categories to individual products based on your needs.
-  images:
-    index:
-      display_images:
-        button_action: continue
-        button_location: /admin/products/solidus-t-shirt/variants
-        title: Product Images
-        selector: .content-main
-        body_text: |+
-          Images are the lifeblood of E-Commerce, so we think it should be as easy as possible to manage them.
+        Let's move on to the edit page, so you can get a look at how products work in Solidus.
+  edit:
+    title_fields:
+      button_action: next
+      title: Editing a Product
+      selector: ".left.col-9"
+      body_text: |+
+        Here's the product edit page. Highlighted below are fields for Name, Description, and Slug. Slugs are created automatically and in a human readable format, but you can override that here if you wish.
+    side_fields:
+      button_acton: continue
+      button_location: /admin/products/solidus-t-shirt/images
+      title: Editing a Product
+      selector: ".right.col-3"
+      body_text: |+
+        The next section is where you can set things like price and weight. You can also assign tax and shipping categories to individual products based on your needs.
+spree/admin/images:
+  index:
+    display_images:
+      button_action: continue
+      button_location: /admin/products/solidus-t-shirt/variants
+      title: Product Images
+      selector: .content-main
+      body_text: |+
+        Images are the lifeblood of E-Commerce, so we think it should be as easy as possible to manage them.
 
-          From the product image page, you can drag & drop, bulk upload, adjust the display order, set the alt text, and set images for each variant your product has.
-  variants:
-    index:
-      variants:
-        button_action: continue
-        button_location: /admin/products/solidus-t-shirt/stock
-        title: Product Variants
-        selector: .content-main
-        body_text: |+
-          Solidus also boasts a robust variant system for when you need them. You can easily create as many variants as you need, based on whatever you want - color, size, material - whatever you want.
-  stock_items:
-    index:
-      stock:
-        button_action: continue
-        button_location: /admin/users/1/edit
-        title: Product Stock
-        selector: .content-main
-        body_text: |+
-          Lastly for products, we come to the stock management page. From here, you can adjust the stock on hand for any number of warehouses. You're also able to set a product as backorderable - allowing customers to still purchase the item, even though it's out of stock.
-  users:
-    edit:
-      users:
-        button_action: next
-        title: Users
-        selector: .content-main
-        body_text: |+
-          On the users page, you can view & edit each users on your site. Below you can see fields for resetting passwords, changing emails, setting roles - which give users admin permissions based on what is selected, and managing their API access.
-      navigation:
-        button_action: next
-        title: User Navigation
-        selector: .tabs
-        body_text: |+
-          From the navigation menu, you can also view a users addresses, order history, items that they've ordered in the past, and any store credit they might have.
-      create_order:
-        button_action: continue
-        button_location: /admin/stores/1/edit
-        title: Create Order For User
-        selector: .header-actions li
-        body_text: |+
-          If needed, you can also create orders for any user on your website - this is handy if, for instance, customers all in to place orders.
-  stores:
-    edit:
-      stores:
-        button_action: continue
-        button_location: /admin/payment_methods
-        title: Store Control
-        selector: .content-main
-        body_text: |+
-          On this page, you can control the finer details of your store. You're also able to create new stores.
-  payment_methods:
-    index:
-      payment_methods:
-        button_action: continue
-        button_location: /admin/tax_rates
-        title: Payment Methods
-        selector: .content-main
-        body_text: |+
-          Solidus has integrations with most major payment providers - Stripe, Braintree, and Klarna, just to name a few - and you can easily manage each of those payment methods here.
-  tax_rates:
-    index:
-      tax_rates:
-        button_action: continue
-        button_location: /admin/shipping_methods
-        title: Tax Rates
-        selector: .content-main
-        body_text: |+
-          Solidus also has integrations with services like TaxJar and Avatax, but if you'd rather control your own taxes, you can easily do that here.
-  shipping_methods:
-    index:
-      shipping_methods:
-        button_action: next
-        title: Shipping Methods
-        selector: .content-main
-        body_text: |+
-          Lastly, you can also control your shipping methods - which ones are available to your users, or which zones or categories can use each shipping rate.
+        From the product image page, you can drag & drop, bulk upload, adjust the display order, set the alt text, and set images for each variant your product has.
+spree/admin/variants:
+  index:
+    variants:
+      button_action: continue
+      button_location: /admin/products/solidus-t-shirt/stock
+      title: Product Variants
+      selector: .content-main
+      body_text: |+
+        Solidus also boasts a robust variant system for when you need them. You can easily create as many variants as you need, based on whatever you want - color, size, material - whatever you want.
+spree/admin/stock_items:
+  index:
+    stock:
+      button_action: continue
+      button_location: /admin/users/1/edit
+      title: Product Stock
+      selector: .content-main
+      body_text: |+
+        Lastly for products, we come to the stock management page. From here, you can adjust the stock on hand for any number of warehouses. You're also able to set a product as backorderable - allowing customers to still purchase the item, even though it's out of stock.
+spree/admin/users:
+  edit:
+    users:
+      button_action: next
+      title: Users
+      selector: .content-main
+      body_text: |+
+        On the users page, you can view & edit each users on your site. Below you can see fields for resetting passwords, changing emails, setting roles - which give users admin permissions based on what is selected, and managing their API access.
+    navigation:
+      button_action: next
+      title: User Navigation
+      selector: .tabs
+      body_text: |+
+        From the navigation menu, you can also view a users addresses, order history, items that they've ordered in the past, and any store credit they might have.
+    create_order:
+      button_action: continue
+      button_location: /admin/stores/1/edit
+      title: Create Order For User
+      selector: .header-actions li
+      body_text: |+
+        If needed, you can also create orders for any user on your website - this is handy if, for instance, customers all in to place orders.
+spree/admin/stores:
+  edit:
+    stores:
+      button_action: continue
+      button_location: /admin/payment_methods
+      title: Store Control
+      selector: .content-main
+      body_text: |+
+        On this page, you can control the finer details of your store. You're also able to create new stores.
+spree/admin/payment_methods:
+  index:
+    payment_methods:
+      button_action: continue
+      button_location: /admin/tax_rates
+      title: Payment Methods
+      selector: .content-main
+      body_text: |+
+        Solidus has integrations with most major payment providers - Stripe, Braintree, and Klarna, just to name a few - and you can easily manage each of those payment methods here.
+spree/admin/tax_rates:
+  index:
+    tax_rates:
+      button_action: continue
+      button_location: /admin/shipping_methods
+      title: Tax Rates
+      selector: .content-main
+      body_text: |+
+        Solidus also has integrations with services like TaxJar and Avatax, but if you'd rather control your own taxes, you can easily do that here.
+spree/admin/shipping_methods:
+  index:
+    shipping_methods:
+      button_action: next
+      title: Shipping Methods
+      selector: .content-main
+      body_text: |+
+        Lastly, you can also control your shipping methods - which ones are available to your users, or which zones or categories can use each shipping rate.
 
-          You can integrate with any number of providers and offer FedEx, UPS, USPS, DHL, any provider you want to use, to your customers.
-      done:
-        button_action: continue
-        button_location: /
-        title: Finished!
-        body_text: |+
-          That's the end of the tour! You can find more information about Solidus on https://solidus.io.
+        You can integrate with any number of providers and offer FedEx, UPS, USPS, DHL, any provider you want to use, to your customers.
+    done:
+      button_action: continue
+      button_location: /
+      title: Finished!
+      body_text: |+
+        That's the end of the tour! You can find more information about Solidus on https://solidus.io.
 
-          Solidus is 100% free, open source, and community managed. Drop by on Slack and say hi! https://slack.solidus.io
+        Solidus is 100% free, open source, and community managed. Drop by on Slack and say hi! https://slack.solidus.io
