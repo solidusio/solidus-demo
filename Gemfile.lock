@@ -157,6 +157,8 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     erubi (1.9.0)
     execjs (2.7.0)
+    factory_bot (6.1.0)
+      activesupport (>= 5.0.0)
     ffi (1.13.0)
     font-awesome-rails (4.7.0.5)
       railties (>= 3.2, < 6.1)
@@ -435,6 +437,7 @@ DEPENDENCIES
   chromedriver-helper
   cloudinary (~> 1.11)
   coffee-rails (~> 5.0)
+  factory_bot
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
