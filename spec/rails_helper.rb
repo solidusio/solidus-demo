@@ -34,6 +34,13 @@ rescue ActiveRecord::PendingMigrationError => e
   puts e.to_s.strip
   exit 1
 end
+
+# Using Capybara
+require 'capybara/rspec'
+require 'capybara/apparition'
+Capybara.javascript_driver = :apparition
+Capybara.server = :puma, { Silent: true } # A fix for rspec/rspec-rails#1897
+
 RSpec.configure do |config|
   # Loading FactoryBot methods
   config.include FactoryBot::Syntax::Methods
