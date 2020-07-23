@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe 'admin validation', type: :feature do
+RSpec.describe 'admin validation', type: :feature do
 
   before(:all) do
     Spree::Role.create(name:"admin")
@@ -10,7 +10,7 @@ describe 'admin validation', type: :feature do
 
   it "allows regular users into admin" do
     visit '/admin/orders'
-    
+
     expect(page.current_path).to eq '/admin/orders'
   end
 end

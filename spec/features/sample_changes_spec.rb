@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe 'sample changes', type: :feature do
+RSpec.describe 'sample changes', type: :feature do
   let(:product) { create(:product) }
 
   before(:all) do
@@ -35,7 +35,7 @@ describe 'sample changes', type: :feature do
 
     fill_in "Name", with: new_product_name
     click_on("Update")
-    
+
     expect(Spree::SampleChanges.unscoped.last.changed_data["name"]).to eq new_product_name
     expect(product.name).to_not eq new_product_name
   end
