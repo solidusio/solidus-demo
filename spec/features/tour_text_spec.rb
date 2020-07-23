@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'tour text', type: :feature do
+RSpec.describe 'tour text', :js, type: :feature do
 
   it "displays tour on frontend" do
     visit '/'
