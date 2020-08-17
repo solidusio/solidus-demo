@@ -40,10 +40,11 @@
     border-radius: 5px;
     border: 1px solid $color-white;
     padding: 12px 18px;
-    background-color: #6391F3;
+    background: $color-blue-light;
     display: inline-block;
     line-height: 1em;
     box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, .15);
+    transition: background .4s ease, box-shadow .4s ease, margin-top .9s ease;
   }
   
   &-text {
@@ -61,8 +62,6 @@
     width: 10px;
     border-bottom: $color-white solid 2px;
     border-left: $color-white solid 2px;
-    margin-left: auto;
-    margin-right: auto;
     transform: rotate(-45deg);
     transition: transform .6s ease, border-color .2s ease, color .2s ease;
     color: $color-white;
@@ -72,15 +71,25 @@
   }
   
   &:hover {
+    .tour-toggler-button {
+      border: 1px solid $color-blue;
+      background: $color-white;
+      box-shadow: none;
+    }
+    
+    .tour-toggler-text {
+      color: $color-blue;
+    }
+    
     .tour-toggler-box {
-      border-color: $color-white;
-      color: $color-white;
+      border-color: $color-blue;
+      color: $color-blue;
+      margin-top: 1px;
     }
   }
   
   .open & {
     background-color: rgb(250, 251, 252);
-    //background: linear-gradient(45deg, rgba(236, 236, 236,1) 0%, rgba(250, 251, 252,1) 100%);
     background: linear-gradient(45deg, rgba(236, 236, 236, 1) 0%, rgba(36, 40, 47, .5) 100%);
     height: $toggler-height-open;
     transition: all .4s ease;
@@ -109,6 +118,11 @@
     &:hover {
       background-position: 30% 0;
       transition: all .4s ease;
+      
+      .tour-toggler-button {
+        border: 0;
+        background: none;
+      }
       
       .tour-toggler-box { 
         opacity: .75;
