@@ -1,0 +1,94 @@
+@import "../variables";
+
+.tour-widget {
+  box-sizing: border-box;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  background-color: $color-gray-lighter;
+  
+  .tour-body {
+    color: $font-color-base;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: height .4s ease;
+    max-width: 1120px;
+    margin: 0 auto;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  &.open {
+    .tour-body {
+      height: $widget-body-height;
+      padding: 12px 15px;
+    }
+  }
+}
+
+.tour-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  order: 1;
+  position: relative;
+  
+  &:after {
+    content: '';
+    background: linear-gradient(-180deg, rgba(250,251,252,0) 0%, rgba(250,251,252,1) 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 25px;
+  }
+
+}
+
+.tour-text {
+  height: $widget-inner-height;
+  overflow-y: auto;
+  padding-bottom: 15px;
+  
+  p {
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.tour-title,
+.tour-text p {
+  margin-top: 0;
+  margin-bottom: 1.125rem;
+}
+
+.tour-title {
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+  color: $color-blue;
+}
+
+.tour-target{
+  z-index: 9999999;
+  background-color: $color-white;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid $color-blue;
+  box-shadow: 0 0 16px 0 rgba(60, 118, 240, .5);
+}
+
+.tour-widget.open .tour-whitebox{
+  top: $widget-body-height + $toggler-height;
+  position: absolute;
+  display: block;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000099;
+  z-index: 999999;
+}

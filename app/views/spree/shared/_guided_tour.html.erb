@@ -3,14 +3,14 @@
   <% tour_text.each_with_index do |(name,val),index| %>
     <div class="tour-body <%= name %>" style="<%= index == 0 ? '' : 'display:none;'%>">
       <% if val["button_action"] == "next" %>
-        <span>
+        <span class="tour-button-wrapper">
           <div class="tour-button btn btn-primary tour-next">
             Next
           </div>
         </span>
       <% else %>
-        <a href="<%= val['button_location'] %><%= val['button_location'].include?('?') ? '&' : '?' %>guided_tour=true">
-          <div class="tour-button btn btn-primary">
+        <a class="tour-button-wrapper" href="<%= val['button_location'] %><%= val['button_location'].include?('?') ? '&' : '?' %>guided_tour=true">
+          <div class="tour-button continue btn btn-primary">
               Continue
           </div>
         </a>
