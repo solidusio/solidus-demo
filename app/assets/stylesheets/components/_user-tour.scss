@@ -11,9 +11,9 @@
     height: 0;
     padding: 0;
     overflow: hidden;
-    transition: height .4s ease;
     max-width: 1120px;
     margin: 0 auto;
+    transition: height .4s ease;
     
     display: flex;
     justify-content: center;
@@ -25,6 +25,10 @@
       height: $widget-body-height;
       padding: 12px 15px;
     }
+    
+    .tour-inner {
+      opacity: 1;
+    }
   }
 }
 
@@ -33,6 +37,8 @@
   margin: 0 auto;
   order: 1;
   position: relative;
+  opacity: 0;
+  transition: opacity .5s ease;
   
   &:after {
     content: '';
@@ -73,17 +79,28 @@
   color: $color-blue;
 }
 
-.tour-target{
+.tour-target {
   z-index: 9999999;
   background-color: $color-white;
   position: relative;
-  border-radius: 5px;
-  border: 1px solid $color-blue;
-  box-shadow: 0 0 16px 0 rgba(60, 118, 240, .5);
+  border-radius: 4px;
+  box-shadow: 0px 0px 0px 8px $color-white;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    box-shadow: 0 0 16px 0 rgba(60, 118, 240, 0.5);
+    width: calc(100% + 18px);
+    height: calc(100% + 18px);
+    border: 1px solid $color-blue;
+    top: -9px;
+    left: -9px;
+    border-radius: 12px;
+  }
 }
 
 .tour-widget.open .tour-whitebox{
-  top: $widget-body-height + $toggler-height;
+  top: $widget-body-height + $toggler-height-open;
   position: absolute;
   display: block;
   left:0;
