@@ -87,8 +87,12 @@
       margin-top: 1px;
     }
   }
-  
-  .open & {
+}
+
+// Change style when the wiget is open
+.open,
+.admin .open {
+  .tour-toggler {
     background-color: rgb(250, 251, 252);
     background: linear-gradient(45deg, rgba(236, 236, 236, 1) 0%, rgba(36, 40, 47, .5) 100%);
     height: $toggler-height-open;
@@ -103,7 +107,7 @@
       padding: 0;
     }
     
-    .tour-toggler-box { 
+    .tour-toggler-box {
       transform: rotate(135deg);
       margin-left: 0;
       vertical-align: middle;
@@ -126,6 +130,62 @@
       
       .tour-toggler-box { 
         opacity: .75;
+      }
+    }
+  }
+}
+
+// Green color for the Admin area
+.admin {
+  .tour-toggler {
+    background-color: rgb(102, 199, 137);
+    background: linear-gradient(45deg, rgba(102, 199, 137,1) 0%, rgba(144, 223, 173,1) 100%);
+    
+    &-button {
+      background: $color-green;
+    }
+    
+    &:hover {
+      .tour-toggler-button {
+        border: 1px solid $color-green;
+      }
+      
+      .tour-toggler-text {
+        color: $color-green;
+      }
+      
+      .tour-toggler-box {
+        border-color: $color-green;
+        color: $color-green;
+      }
+    }
+  }
+  
+  .open {
+    .tour-toggler {
+      background-color: rgb(250, 251, 252);
+      background: linear-gradient(45deg, rgba(236, 236, 236, 1) 0%, rgba(36, 40, 47, .5) 100%);
+      background-size: 300% 100%;
+      
+      .tour-toggler-box {
+        border-color: $color-dark;
+        color: $color-dark;
+      }
+      
+      &:hover {
+        background-position: 30% 0;
+      }
+    }
+  }
+  
+  .tour-widget {
+    .btn-primary {
+      background-color: $color-green;
+      border-color: $color-green;
+      
+      &:hover {
+        background-color: darken($color-green, 10%);
+        border-color: darken($color-green, 10%);
       }
     }
   }

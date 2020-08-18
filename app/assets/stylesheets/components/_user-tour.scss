@@ -60,10 +60,6 @@
   p {
     font-size: $font-size-base;
     line-height: $line-height-base;
-    
-    &:last-of-type {
-      margin-bottom: 0;
-    }
   }
 }
 
@@ -77,6 +73,7 @@
   font-size: $font-size-base;
   font-weight: $font-weight-bold;
   color: $color-blue;
+  line-height: $line-height-headings;
 }
 
 .tour-target {
@@ -89,7 +86,7 @@
   &::after {
     content: '';
     position: absolute;
-    box-shadow: 0 0 16px 0 rgba(60, 118, 240, 0.5);
+    box-shadow: 0 0 16px 0 rgba(60, 118, 240, .5);
     width: calc(100% + 18px);
     height: calc(100% + 18px);
     border: 1px solid $color-blue;
@@ -99,7 +96,7 @@
   }
 }
 
-.tour-widget.open .tour-whitebox{
+.tour-widget.open .tour-whitebox {
   top: $widget-body-height + $toggler-height-open;
   position: absolute;
   display: block;
@@ -108,4 +105,27 @@
   height: 100%;
   background-color: #00000099;
   z-index: 999999;
+}
+
+// Green color for the Admin area
+.admin {
+  .tour-title {
+    color: $color-green;
+  }
+  
+  .tour-target {
+    //box-shadow: none;
+    margin-top: 15px !important;
+    margin-left: 15px !important;
+    margin-bottom: 15px !important;
+    margin-right: 15px !important;
+    
+    &::after {
+      content: '';
+      box-shadow: none;
+      box-shadow: 0 0 16px 0 rgba(0, 0, 0, .5); //3px -6px 10px 0 rgb(0 0 0 / 20%)
+      border: 0;
+    }
+  }
+
 }
