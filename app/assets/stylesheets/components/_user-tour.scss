@@ -107,6 +107,16 @@
   z-index: 999999;
 }
 
+.tour-body.start-wrapper {
+  background: $color-gray-lighter;
+  background: radial-gradient(circle, rgba(60, 118, 240, .2) 0%, rgba(251, 252, 252, 1) 83%);
+  
+  .admin & {
+    background: $color-gray-lighter;
+    background: radial-gradient(circle, rgba(102, 199, 137, .2) 0%, rgba(251, 252, 252, 1) 83%);
+  }
+}
+
 // Green color for the Admin area
 .admin {
   .tour-title {
@@ -114,7 +124,6 @@
   }
   
   .tour-target {
-    //box-shadow: none;
     margin-top: 15px !important;
     margin-left: 15px !important;
     margin-bottom: 15px !important;
@@ -123,9 +132,8 @@
     &::after {
       content: '';
       box-shadow: none;
-      box-shadow: 0 0 16px 0 rgba(0, 0, 0, .5); //3px -6px 10px 0 rgb(0 0 0 / 20%)
+      box-shadow: 3px -6px 10px 0 rgba(0, 0, 0, .2);
       border: 0;
     }
   }
-
 }
