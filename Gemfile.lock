@@ -22,7 +22,7 @@ GIT
 
 GIT
   remote: https://github.com/seand7565/solidus_user_guides
-  revision: 987d39e7824fe3aa097713ab5fafef37d8678e97
+  revision: 1248b59ebd198d033af7d4106d368bb2f0a6ae52
   specs:
     solidus_user_guides (0.0.1)
       solidus_core (>= 2.0.0, < 3)
