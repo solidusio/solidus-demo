@@ -10,10 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_15_085008) do
+ActiveRecord::Schema.define(version: 2020_10_30_102911) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "action_mailbox_inbound_emails", force: :cascade do |t|
+    t.integer "status", default: 0, null: false
+    t.string "message_id", null: false
+    t.string "message_checksum", null: false
+    t.string "sample_indicator_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["message_id", "message_checksum"], name: "index_action_mailbox_inbound_emails_uniqueness", unique: true
+    t.index ["sample_indicator_id"], name: "index_action_mailbox_inbound_emails_on_sample_indicator_id"
+  end
+
+  create_table "action_text_rich_texts", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "body"
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.string "sample_indicator_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["record_type", "record_id", "name"], name: "index_action_text_rich_texts_uniqueness", unique: true
+    t.index ["sample_indicator_id"], name: "index_action_text_rich_texts_on_sample_indicator_id"
+  end
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -520,6 +543,7 @@ ActiveRecord::Schema.define(version: 2020_07_15_085008) do
     t.boolean "promotionable", default: true
     t.string "meta_title"
     t.string "sample_indicator_id"
+    t.datetime "discontinue_on"
     t.index ["available_on"], name: "index_spree_products_on_available_on"
     t.index ["deleted_at"], name: "index_spree_products_on_deleted_at"
     t.index ["name"], name: "index_spree_products_on_name"
@@ -1147,6 +1171,7 @@ ActiveRecord::Schema.define(version: 2020_07_15_085008) do
     t.string "cart_tax_country_iso"
     t.string "available_locales"
     t.string "sample_indicator_id"
+    t.string "bcc_email"
     t.index ["code"], name: "index_spree_stores_on_code"
     t.index ["default"], name: "index_spree_stores_on_default"
     t.index ["sample_indicator_id"], name: "index_spree_stores_on_sample_indicator_id"
@@ -1248,6 +1273,7 @@ ActiveRecord::Schema.define(version: 2020_07_15_085008) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "sample_indicator_id"
+    t.boolean "default_billing", default: false
     t.index ["address_id"], name: "index_spree_user_addresses_on_address_id"
     t.index ["sample_indicator_id"], name: "index_spree_user_addresses_on_sample_indicator_id"
     t.index ["user_id", "address_id"], name: "index_spree_user_addresses_on_user_id_and_address_id", unique: true
@@ -1320,6 +1346,7 @@ ActiveRecord::Schema.define(version: 2020_07_15_085008) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "sample_indicator_id"
+    t.boolean "apply_to_all", default: true, null: false
     t.index ["product_id"], name: "index_spree_variant_property_rules_on_product_id"
     t.index ["sample_indicator_id"], name: "index_spree_variant_property_rules_on_sample_indicator_id"
   end
