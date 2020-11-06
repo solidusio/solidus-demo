@@ -11,3 +11,9 @@ This allows access to the backend without the need to log in, allowing potential
 ## Deploying
 
 demo.solidus.io auto-deploys (on Heroku) from the master branch of this repository - a few minutes after your PR is merged, you should see it reflected on the website.
+
+## Database Changes
+
+This demo relies on the existence of a `sample_indicator_id` for every table in the database (except two - [see more here.](https://github.com/nebulab/solidus-demo/blob/a727c82d0e69bd1b901e10f9eb6a5bbae482b5cd/db/migrate/20200529174800_add_sample_indicator_id_to_everything.rb))
+
+When adding new tables to the database, please make sure to also include a `sample_indicator_id` string, otherwise the demo might break.
