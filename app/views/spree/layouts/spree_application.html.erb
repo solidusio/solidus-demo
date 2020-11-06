@@ -5,6 +5,10 @@
     <%= render partial: 'spree/shared/head' %>
   </head>
   <body class="<%= body_class %>" id="<%= @body_id || 'default' %>">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3D8K5G"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <%= render partial: 'spree/components/layout/header' %>
     <%= flash_messages %>
     <%= render 'spree/components/navigation/breadcrumbs', taxon: @taxon, base_class: 'breadcrumbs' %>
