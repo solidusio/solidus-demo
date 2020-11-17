@@ -10,14 +10,14 @@
   font-weight: $button-font-weight;
   font-size: $font-size-base;
   line-height: 1rem;
-  
+
   &.continue {
     &::after {
       content: '';
       display: inline-block;
       vertical-align: middle;
       padding: 5px;
-      background: url("icon-arrow-rh.svg") no-repeat;
+      background: asset_data_url("icon-arrow-rh.svg") no-repeat;
       background-size: 100% auto;
       width: 10px;
       height: 10px;
@@ -34,7 +34,7 @@
   transition: transform .5s linear, background .9s ease;
   height: $toggler-height;
   text-align: center;
-  
+
   &-button {
     margin: 0 auto;
     border-radius: 5px;
@@ -46,7 +46,7 @@
     box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, .15);
     transition: background .4s ease, box-shadow .4s ease, margin-top .9s ease;
   }
-  
+
   &-text {
     color: $color-white;
     font-size: $font-size-base;
@@ -55,7 +55,7 @@
     opacity: 1;
     width: auto;
   }
-  
+
   &-box {
     padding: 2px;
     height: 10px;
@@ -69,18 +69,18 @@
     margin-left: 10px;
     vertical-align: top;
   }
-  
+
   &:hover {
     .tour-toggler-button {
       border: 1px solid $color-blue;
       background: $color-white;
       box-shadow: none;
     }
-    
+
     .tour-toggler-text {
       color: $color-blue;
     }
-    
+
     .tour-toggler-box {
       border-color: $color-blue;
       color: $color-blue;
@@ -98,15 +98,15 @@
     height: $toggler-height-open;
     transition: all .4s ease;
     background-size: 300% 100%;
-    
-    
+
+
     &-button {
       background: none;
       border: none;
       box-shadow: none;
       padding: 0;
     }
-    
+
     .tour-toggler-box {
       transform: rotate(135deg);
       margin-left: 0;
@@ -114,21 +114,21 @@
       border-color: $color-dark;
       color: $color-dark;
     }
-    
+
     .tour-toggler-text {
       display: none;
     }
-    
+
     &:hover {
       background-position: 30% 0;
       transition: all .4s ease;
-      
+
       .tour-toggler-button {
         border: 0;
         background: none;
       }
-      
-      .tour-toggler-box { 
+
+      .tour-toggler-box {
         opacity: .75;
       }
     }
@@ -140,49 +140,49 @@
   .tour-toggler {
     background-color: rgb(102, 199, 137);
     background: linear-gradient(45deg, rgba(102, 199, 137,1) 0%, rgba(144, 223, 173,1) 100%);
-    
+
     &-button {
       background: $color-green;
     }
-    
+
     &:hover {
       .tour-toggler-button {
         border: 1px solid $color-green;
       }
-      
+
       .tour-toggler-text {
         color: $color-green;
       }
-      
+
       .tour-toggler-box {
         border-color: $color-green;
         color: $color-green;
       }
     }
   }
-  
+
   .open {
     .tour-toggler {
       background-color: rgb(250, 251, 252);
       background: linear-gradient(45deg, rgba(236, 236, 236, 1) 0%, rgba(36, 40, 47, .5) 100%);
       background-size: 300% 100%;
-      
+
       .tour-toggler-box {
         border-color: $color-dark;
         color: $color-dark;
       }
-      
+
       &:hover {
         background-position: 30% 0;
       }
     }
   }
-  
+
   .tour-widget {
     .btn-primary {
       background-color: $color-green;
       border-color: $color-green;
-      
+
       &:hover {
         background-color: darken($color-green, 10%);
         border-color: darken($color-green, 10%);

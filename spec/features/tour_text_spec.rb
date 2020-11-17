@@ -3,15 +3,15 @@
 require 'rails_helper'
 
 RSpec.describe 'tour text', :js, type: :feature do
-  it "displays tour on frontend" do
+  it 'displays tour on frontend' do
     visit '/'
-    expect(page).to have_css(".tour-title", text: "Solidus Guided Tour", visible: false)
+
+    expect(page).to have_content('Guided Tour')
   end
 
-  it "displays tour on backend" do
-    visit '/admin/orders'
+  it 'displays tour on backend' do
+    visit '/admin'
 
-    pending "Failing on CircleCI for some unknown reason"
-    expect(page).to have_css(".tour-title", text: "Solidus Admin", visible: false)
+    expect(page).to have_content('Guided Tour')
   end
 end
