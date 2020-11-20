@@ -25,6 +25,7 @@ gem "solidus_paypal_commerce_platform", git: 'https://github.com/nebulab/solidus
 group :heroku do
   gem 'cloudinary', '~> 1.11'
   gem 'paperclip-cloudinary'
+  gem "sentry-raven"
 end
 
 # Use rspec for testing
