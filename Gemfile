@@ -22,6 +22,8 @@ gem "solidus_starter_frontend", git: 'https://github.com/nebulab/solidus_starter
 gem "solidus_user_guides", git: 'https://github.com/seand7565/solidus_user_guides'
 gem "solidus_paypal_commerce_platform", git: 'https://github.com/nebulab/solidus_paypal_commerce_platform'
 
+gem 'prependers'
+
 group :heroku do
   gem 'cloudinary', '~> 1.11'
   gem 'paperclip-cloudinary'
