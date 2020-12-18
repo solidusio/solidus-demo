@@ -40,3 +40,6 @@ module SolidusDemo
     # the framework and any gems in your application.
   end
 end
+
+# Load prependers automatically from app/prependers.
+Prependers.setup_for_rails(namespace: SolidusDemo)
