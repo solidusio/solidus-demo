@@ -13,6 +13,8 @@ gem 'puma'
 gem 'sass-rails', '~> 5.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
+# Using RackAttack for security
+gem 'rack-attack'
 
 gem 'solidus_core'
 gem 'solidus_api'
