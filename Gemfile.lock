@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: https://github.com/nebulab/solidus_starter_frontend
-  revision: aa3761191d0e0ac97ad3ecb54c0113d8856ba58f
+  revision: 709e44e93dbedf46cfa502e783f0bda6f301596a
   specs:
     solidus_starter_frontend (0.1.0)
       canonical-rails (~> 0.2.0)
@@ -116,8 +116,8 @@ GEM
     builder (3.2.4)
     byebug (11.1.3)
     cancancan (3.1.0)
-    canonical-rails (0.2.9)
-      rails (>= 4.1, < 6.1)
+    canonical-rails (0.2.11)
+      rails (>= 4.1, < 6.2)
     capybara (3.33.0)
       addressable
       mini_mime (>= 0.1.3)
