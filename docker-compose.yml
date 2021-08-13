@@ -1,0 +1,47 @@
+version: '3.7'
+
+services:
+  postgres:
+    image: postgres:13.2
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: sample-dev
+    volumes:
+      - postgres:/var/lib/postgresql/data:cached
+
+  app:
+    build:
+      context: .dockerdev
+      dockerfile: Dockerfile
+      args:
+        RUBY_VERSION: "2.6.6"
+        PG_VERSION: 13
+        NODE_VERSION: 14
+        BUNDLER_VERSION: 2
+    image: solidus-demo
+    command: bash -c "(bundle check || bundle) && bin/rails server --binding 0.0.0.0 --port ${SAMPLE_PORT:-3000}"
+    environment:
+      DB_USERNAME: postgres
+      DB_PASSWORD: postgres
+      DB_HOST: postgres
+      HISTFILE: "/home/solidus_demo_user/history/bash_history"
+      CAPYBARA_JS_DRIVER: apparition_docker_friendly
+    ports:
+      - "${SAMPLE_PORT:-3000}:${SAMPLE_PORT:-3000}"
+    volumes:
+      - .:/home/solidus_demo_user/app:delegated
+      - bundle:/home/solidus_demo_user/gems:cached
+      - history:/home/solidus_demo_user/history:cached
+      - .dockerdev/.psqlrc:/home/solidus_demo_user/.psqlrc:cached
+    tty: true
+    stdin_open: true
+    tmpfs:
+      - /tmp
+    depends_on:
+      - postgres
+
+volumes:
+  bundle:
+  history:
+  postgres:

@@ -38,7 +38,18 @@ end
 # Using Capybara
 require 'capybara/rspec'
 require 'capybara/apparition'
-Capybara.javascript_driver = :apparition
+Capybara.register_driver :apparition_docker_friendly do |app|
+  opts = {
+    headless: true,
+    browser_options: [
+      :no_sandbox,
+      :disable_gpu,
+      { disable_features: 'VizDisplayCompositor' }
+    ]
+  }
+  Capybara::Apparition::Driver.new(app, opts)
+end
+Capybara.javascript_driver = ENV.fetch('CAPYBARA_JS_DRIVER', :apparition).to_sym
 Capybara.server = :puma, { Silent: true } # A fix for rspec/rspec-rails#1897
 
 RSpec.configure do |config|
