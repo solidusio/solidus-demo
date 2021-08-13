@@ -23,6 +23,7 @@ gem 'solidus_sample'
 gem "solidus_starter_frontend", git: 'https://github.com/nebulab/solidus_starter_frontend'
 gem "solidus_user_guides", git: 'https://github.com/seand7565/solidus_user_guides'
 gem "solidus_paypal_commerce_platform", git: 'https://github.com/nebulab/solidus_paypal_commerce_platform'
+gem "solidus_graphql_api", git: 'https://github.com/solidusio-contrib/solidus_graphql_api'
 
 gem 'prependers'
 
