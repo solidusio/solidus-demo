@@ -1,0 +1,18 @@
+<section class="hero">
+  <div class="hero__container">
+    <div class="hero__message">
+      <%= render(
+        "spree/components/typography/hero_title",
+        content: "Minimalist Vibes"
+      ) %>
+      <%= render(
+        "spree/components/typography/subtitle",
+        content: "Shop all the collection."
+      ) %>
+    </div>
+    <div class="hero__link">
+      <%= link_to t('shop_now'), products_path, class: "button button-secondary" %>
+    </div>
+    <div class="hero__background"></div>
+  </div>
+</section>
