@@ -27,6 +27,7 @@ services:
       DB_HOST: postgres
       HISTFILE: "/home/solidus_demo_user/history/bash_history"
       CAPYBARA_JS_DRIVER: apparition_docker_friendly
+      GRAPHQL_PLAYGROUND_ORIGIN: "${GRAPHQL_PLAYGROUND_ORIGIN:-http://localhost:4000}"
     ports:
       - "${SAMPLE_PORT:-3000}:${SAMPLE_PORT:-3000}"
     volumes:
