@@ -5,14 +5,15 @@
     <div class="product-page__images">
       <%= render 'spree/components/products/product_image' %>
       <%= render 'spree/components/products/product_thumbnails' %>
+      <%= render 'spree/components/products/product_info' %>
     </div>
 
     <div class="product-page__info">
-      <%= render 'spree/components/products/product_info' %>
+      <%= render 'spree/components/products/product_header' %>
       <%= render 'spree/components/products/product_promotions' %>
       <%= render 'spree/components/products/product_form' %>
-      <%= render 'spree/components/products/product_properties' %>
       <%= render 'spree/components/products/product_taxons' %>
+      <%= render 'spree/components/products/product_properties' %>
     </div>
   </article>
 <% end %>

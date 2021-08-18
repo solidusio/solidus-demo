@@ -9,8 +9,10 @@
     </h2>
 
     <ul class="product-variants__list">
+    <% debugger %>
       <% variants.each_with_index do |variant, index| %>
         <li>
+        <% debugger %>
           <%= radio_button_tag(
             'variant_id',
             variant.id,
