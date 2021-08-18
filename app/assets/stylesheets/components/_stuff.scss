@@ -56,7 +56,6 @@
 
 .cart-info {
   display: inline-block;
-  overflow: hidden;
   width: 32px;
   height: 42px;
   background: asset_data_url("icon-shopping-cart.svg") no-repeat;
@@ -67,8 +66,6 @@
   &.full {
     color: $color-blue;
     font-weight: $font-weight-bold;
-    text-indent: 50px;
-    line-height: 0;
     text-align: right;
     // text-decoration-color: $color-blue;
     // text-decoration-thickness: 1rem;
@@ -76,6 +73,16 @@
     // text-decoration-skip-ink: none;
     // text-decoration: underline;
   }
+
+.link-text {
+  color: #fff;
+  background: #3c76f0;
+  font-weight: 900;
+  padding: 0.3rem 12px 0.3rem 6px;
+  border-radius: 38px;
+  font-size: 12px;
+  margin-left: 30px;
+}
 
   .amount {
     display: none;
@@ -105,7 +112,7 @@
 
   .intro-icons {
     list-style: none;
-    
+
     li {
       display: inline-block;
       padding: 2rem;
@@ -191,7 +198,7 @@
   margin: 0 auto;
   grid-template-columns: repeat(2, 1fr);
   transition: all .4 ease-in-out;
-  
+
   &__article {
     &:first-of-type {
       .categories-grid__link {
