@@ -32,3 +32,5 @@
 en:
   hello: "Hello world"
   shop_now: "Shop Now"
+  description: "Description"
+  more_like_this: "More like this"

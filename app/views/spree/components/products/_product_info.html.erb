@@ -1,5 +1,8 @@
-<div class= product-info>
-  <p class="product-info__description" itemprop="description">
+<div class="product-page__description">
+  <p class="product-description" itemprop="description">
+    <h2 class="product-description__title">
+        <%= t('description') %>
+    </h2>
     <%= product_description(@product) rescue t('spree.product_has_no_description') %>
   </p>
 </div>
