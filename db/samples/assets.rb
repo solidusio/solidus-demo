@@ -136,6 +136,14 @@ products[:solidus_womans].reload.variants.each do |variant|
   end
 end
 
+products[:solidus_hoodie].reload.variants.each do |variant|
+  color = variant.option_value("tshirt-color").downcase
+  main_image = image("solidus_hoodie_#{color}", "jpg")
+  File.open(main_image) do |f|
+    variant.images.create!(attachment: f)
+  end
+end
+
 images.each do |variant, attachments|
   puts "Loading images for #{variant.product.name}"
   attachments.each do |attachment|

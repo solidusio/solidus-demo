@@ -5,7 +5,7 @@ module SolidusDemo
         def self.prepended(klass)
           klass.attachment_definitions[:attachment][:styles] = {
             mini: '120x180>',
-            small: '340x510>',
+            small: '680x1020>',
             product: '680x1020>',
             large: '680x1020>'
           }

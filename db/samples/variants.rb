@@ -123,6 +123,42 @@ variants = [
     cost_price: 17
   },
   {
+    product: solidus_hoodie,
+    option_values: [small, black],
+    sku: "SOL-HD001",
+    cost_price: 27
+  },
+  {
+    product: solidus_hoodie,
+    option_values: [small, white],
+    sku: "SOL-HD002",
+    cost_price: 27
+  },
+  {
+    product: solidus_hoodie,
+    option_values: [medium, black],
+    sku: "SOL-HD003",
+    cost_price: 27
+  },
+  {
+    product: solidus_hoodie,
+    option_values: [medium, white],
+    sku: "SOL-HD004",
+    cost_price: 27
+  },
+  {
+    product: solidus_hoodie,
+    option_values: [large, black],
+    sku: "SOL-HD005",
+    cost_price: 27
+  },
+  {
+    product: solidus_hoodie,
+    option_values: [large, white],
+    sku: "SOL-HD006",
+    cost_price: 27
+  },
+  {
     product: solidus_womans,
     option_values: [small, black],
     sku: "SOL-WM001",
