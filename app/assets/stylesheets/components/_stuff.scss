@@ -358,7 +358,7 @@
 
   &-row {
     margin-bottom: 4rem;
-  
+
     @media (min-width:900px) {
       display: flex;
       margin-bottom: 8rem;
@@ -367,7 +367,7 @@
 
   &__description {
     margin-bottom: 3rem;
-  
+
     @media (min-width:900px) {
       padding-right: 4rem;
       width: 60%;
@@ -551,7 +551,7 @@
   &__primary-action {
     padding: 3rem 0 0 0;
     min-width: 286px;
-  
+
     button {
       width: 100%;
     }
@@ -600,4 +600,9 @@
   &__continue::before {
     content: '';
   }
+}
+
+// Hidden Class
+.d-hide{
+  display:none;
 }
