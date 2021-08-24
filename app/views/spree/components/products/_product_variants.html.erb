@@ -15,7 +15,9 @@
             'variant_id',
             variant.id,
             index == 0,
-            data: { js: 'variant-radio', js_price: variant.price_for(current_pricing_options).to_s }
+            "data-option-value-ids" => sorted_option_values(variant).to_json,
+            "data-target" => "variantOptions",
+            "data-price" => variant.price_for(current_pricing_options).to_html
           ) %>
 
           <%= label_tag "variant_id_#{ variant.id }" do %>
