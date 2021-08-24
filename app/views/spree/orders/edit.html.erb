@@ -12,10 +12,12 @@
       <%= render 'spree/components/cart/cart_footer', order: order %>
     <% end %>
 
-    <div class="cart-page__coupon-code">
-      <%= render 'spree/components/orders/coupon_code' %>
+    <div class="cart-page__other-actions">
+      <%= render 'spree/components/cart/cart_secondary_actions' %>
+    
+      <div class="cart-page__coupon-code">
+        <%= render 'spree/components/orders/coupon_code' %>
+      </div>
     </div>
-
-    <%= render 'spree/components/cart/cart_secondary_actions' %>
   <% end %>
 </article>
