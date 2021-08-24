@@ -101,7 +101,7 @@ taxons = [
     taxonomy: brands
   },
   {
-    name: "Solidus",
+    name: "Solidus Apparel",
     taxonomy: brands,
     parent: "Brand",
     products: [
@@ -115,7 +115,7 @@ taxons = [
     ]
   },
   {
-    name: "Ruby",
+    name: "Ruby Apparel",
     taxonomy: brands,
     parent: "Brand",
     products: [
