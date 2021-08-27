@@ -18,6 +18,9 @@
             "data-presentation": option_value.presentation,
             "data-option-index": index
           ) %>
+          <span class='<%= "selected-#{option_type.presentation.downcase}" %> <%= "selected-#{option_value.name.downcase}" %>'>
+            <span class="value"><%= option_value.presentation %></span>
+          </span>
         </label>
       <% end %>
     </div>
