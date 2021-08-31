@@ -30,7 +30,8 @@ products = [
     weight: 0.5,
     height: 20,
     width: 10,
-    depth: 5
+    depth: 5,
+    featured: true
   },
   {
     name: "Developers T-Shirt",
@@ -52,7 +53,8 @@ products = [
     weight: 0.5,
     height: 20,
     width: 10,
-    depth: 5
+    depth: 5,
+    featured: true
   },
   {
     name: "Monogram Hoodie",
@@ -63,7 +65,8 @@ products = [
     weight: 1,
     height: 20,
     width: 10,
-    depth: 5
+    depth: 5,
+    featured: true
   },
   {
     name: "Logo T-Shirt",
@@ -85,7 +88,8 @@ products = [
     weight: 0.8,
     height: 20,
     width: 10,
-    depth: 5
+    depth: 5,
+    featured: true
   },
   {
     name: "Developers Cap",
@@ -118,7 +122,8 @@ products = [
     weight: 1,
     height: 5,
     width: 5,
-    depth: 5
+    depth: 5,
+    featured: true
   },
   {
     name: "Insulated Water Bottle - Ruby",
@@ -151,7 +156,8 @@ products = [
     weight: 0.5,
     height: 20,
     width: 10,
-    depth: 5
+    depth: 5,
+    featured: true
   }
 ]
 

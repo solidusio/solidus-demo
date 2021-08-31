@@ -41,9 +41,14 @@ taxons = [
     parent: "Categories"
   },
   {
+    name: "Accessories",
+    taxonomy: categories,
+    parent: "Categories"
+  },
+  {
     name: "Caps",
     taxonomy: categories,
-    parent: "Categories",
+    parent: "Accessories",
     position: 1,
     products: [
       products[:solidus_beanie],
@@ -53,7 +58,7 @@ taxons = [
   {
     name: "Totes",
     taxonomy: categories,
-    parent: "Categories",
+    parent: "Accessories",
     position: 2,
     products: [
       products[:solidus_tote],
@@ -63,7 +68,7 @@ taxons = [
   {
     name: "Water Bottles",
     taxonomy: categories,
-    parent: "Categories",
+    parent: "Accessories",
     position: 3,
     products: [
       products[:solidus_water_bottle],
