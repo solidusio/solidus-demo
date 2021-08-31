@@ -22,7 +22,7 @@ default_attrs = {
 
 products = [
   {
-    name: "Solidus T-Shirt",
+    name: "Oversized Logo Hoodie",
     tax_category: tax_category,
     shipping_category: shipping_category,
     price: 19.99,
@@ -33,7 +33,7 @@ products = [
     depth: 5
   },
   {
-    name: "Solidus Long Sleeve",
+    name: "Developers T-Shirt",
     tax_category: tax_category,
     shipping_category: shipping_category,
     price: 19.99,
@@ -44,7 +44,7 @@ products = [
     depth: 5
   },
   {
-    name: "Solidus Womans",
+    name: "Premium Cotton T-Shirt",
     tax_category: tax_category,
     shipping_category: shipping_category,
     price: 19.99,
@@ -55,18 +55,7 @@ products = [
     depth: 5
   },
   {
-    name: "Solidus Snapback Cap",
-    tax_category: tax_category,
-    shipping_category: shipping_category,
-    price: 15.99,
-    eur_price: 14,
-    weight: 0.5,
-    height: 5,
-    width: 5,
-    depth: 5
-  },
-  {
-    name: "Solidus Hoodie Zip",
+    name: "Monogram Hoodie",
     tax_category: tax_category,
     shipping_category: shipping_category,
     price: 29.99,
@@ -77,7 +66,7 @@ products = [
     depth: 5
   },
   {
-    name: "Ruby Hoodie",
+    name: "Logo T-Shirt",
     tax_category: tax_category,
     shipping_category: shipping_category,
     price: 29.99,
@@ -88,7 +77,7 @@ products = [
     depth: 5
   },
   {
-    name: "Ruby Hoodie Zip",
+    name: "Monogram Hoodie - Ruby",
     tax_category: tax_category,
     shipping_category: shipping_category,
     price: 29.99,
@@ -99,7 +88,7 @@ products = [
     depth: 5
   },
   {
-    name: "Ruby Polo",
+    name: "Developers Cap",
     tax_category: tax_category,
     shipping_category: shipping_category,
     price: 26.99,
@@ -110,7 +99,7 @@ products = [
     depth: 5
   },
   {
-    name: "Solidus Mug",
+    name: "Geek Beanie",
     tax_category: tax_category,
     shipping_category: shipping_category,
     price: 9.99,
@@ -121,7 +110,7 @@ products = [
     depth: 5
   },
   {
-    name: "Ruby Mug",
+    name: "Insulated Water Bottle - Solidus",
     tax_category: tax_category,
     shipping_category: shipping_category,
     price: 9.99,
@@ -132,7 +121,7 @@ products = [
     depth: 5
   },
   {
-    name: "Solidus Tote",
+    name: "Insulated Water Bottle - Ruby",
     tax_category: tax_category,
     shipping_category: shipping_category,
     price: 15.99,
@@ -143,7 +132,18 @@ products = [
     depth: 5
   },
   {
-    name: "Ruby Tote",
+    name: "Cotton Tote - Solidus",
+    tax_category: tax_category,
+    shipping_category: shipping_category,
+    price: 15.99,
+    eur_price: 14,
+    weight: 0.5,
+    height: 20,
+    width: 10,
+    depth: 5
+  },
+  {
+    name: "Cotton Tote - Ruby",
     tax_category: tax_category,
     shipping_category: shipping_category,
     price: 15.99,

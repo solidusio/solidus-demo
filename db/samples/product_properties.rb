@@ -2,50 +2,67 @@
 
 products =
   {
-    "Solidus Tote" =>
+    "Cotton Tote - Solidus" =>
     {
       "Type" => "Tote",
       "Size" => %{15" x 18" x 6"},
       "Material" => "Canvas"
     },
-    "Ruby Tote" =>
+    "Cotton Tote - Ruby" =>
     {
       "Type" => "Tote",
       "Size" => %{15" x 18" x 6"},
       "Material" => "Canvas"
     },
-    "Solidus Snapback Cap" =>
+    "Geek Beanie" =>
     {
-      "Type" => "Snapback Cap",
+      "Type" => "Beanie",
+      "Size" => "One Size",
+      "Material" => "100% Wool"
+    },
+    "Developers Cap" =>
+    {
+      "Type" => "Cap",
       "Size" => "One Size",
       "Material" => "100% Cotton"
     },
-    "Solidus T-Shirt" =>
+    "Premium Cotton T-Shirt" =>
     {
       "Manufacturer" => "Jerseys",
-      "Brand" => "Conditioned",
+      "Brand" => "Solidus",
       "Model" => "TL9002",
       "Shirt Type" => "Ringer T",
       "Sleeve Type" => "Short",
       "Made from" => "100% Cotton",
       "Fit" => "Loose",
-      "Gender" => "Men's"
+      "Gender" => "Unisex"
     },
-    "Solidus Long Sleeve" =>
+    "Logo T-Shirt" =>
     {
       "Manufacturer" => "Wilson",
-      "Brand" => "Wannabe Sports",
+      "Brand" => "Solidus",
       "Model" => "TL9002",
       "Shirt Type" => "Jersey",
       "Sleeve Type" => "Long",
       "Made from" => "100% cotton",
       "Fit" => "Loose",
-      "Gender" => "Men's"
+      "Gender" => "Unisex"
     },
-    "Solidus Hoodie Zip" =>
+    "Developers T-Shirt" =>
     {
       "Manufacturer" => "Jerseys",
-      "Brand" => "Wannabe Sports",
+      "Brand" => "Ruby",
+      "Model" => "TL9002",
+      "Shirt Type" => "Ringer T",
+      "Sleeve Type" => "Short",
+      "Made from" => "100% Cotton",
+      "Fit" => "Loose",
+      "Gender" => "Unisex"
+    },
+    "Oversized Logo Hoodie" =>
+    {
+      "Manufacturer" => "Jerseys",
+      "Brand" => "Solidus",
       "Model" => "HD9001",
       "Shirt Type" => "Jersey",
       "Sleeve Type" => "Long",
@@ -53,10 +70,10 @@ products =
       "Fit" => "Loose",
       "Gender" => "Unisex"
     },
-    "Ruby Hoodie" =>
+    "Monogram Hoodie" =>
     {
       "Manufacturer" => "Wilson",
-      "Brand" => "Resiliance",
+      "Brand" => "Solidus",
       "Model" => "HD2001",
       "Shirt Type" => "Baseball",
       "Sleeve Type" => "Long",
@@ -64,48 +81,26 @@ products =
       "Fit" => "Loose",
       "Gender" => "Unisex"
     },
-    "Ruby Hoodie Zip" =>
+    "Monogram Hoodie - Ruby" =>
     {
-      "Manufacturer" => "Jerseys",
-      "Brand" => "Wannabe Sports",
-      "Model" => "HD9001",
-      "Shirt Type" => "Jersey",
+      "Manufacturer" => "Wilson",
+      "Brand" => "Ruby",
+      "Model" => "HD2001",
+      "Shirt Type" => "Baseball",
       "Sleeve Type" => "Long",
-      "Made from" => "100% cotton",
+      "Made from" => "90% Cotton, 10% Nylon",
       "Fit" => "Loose",
       "Gender" => "Unisex"
     },
-    "Ruby Polo" =>
+    "Insulated Water Bottle - Solidus" =>
     {
-      "Manufacturer" => "Wilson",
-      "Brand" => "Resiliance",
-      "Model" => "PL9001",
-      "Shirt Type" => "Ringer T",
-      "Sleeve Type" => "Short",
-      "Made from" => "100% Cotton",
-      "Fit" => "Slim",
-      "Gender" => "Men's"
-    },
-    "Solidus Mug" =>
-    {
-      "Type" => "Mug",
+      "Type" => "Insulated Water Bottle",
       "Size" => %{4.5" tall, 3.25" dia.}
     },
-    "Ruby Mug" =>
+    "Insulated Water Bottle - Ruby" =>
     {
-      "Type" => "Mug",
+      "Type" => "Insulated Water Bottle",
       "Size" => %{4.5" tall, 3.25" dia.}
-    },
-    "Solidus Womans" =>
-    {
-      "Manufacturer" => "Jerseys",
-      "Brand" => "Conditioned",
-      "Model" => "WM6001",
-      "Shirt Type" => "Skinny",
-      "Sleeve Type" => "Short",
-      "Made from" => "90% Cotton, 10% Nylon",
-      "Fit" => "Slim",
-      "Gender" => "Women's"
     }
   }
 
