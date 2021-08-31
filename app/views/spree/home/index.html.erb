@@ -4,7 +4,11 @@
 
 <%= render partial: 'spree/components/presentation/intro' %>
 
+<%= render partial: 'spree/components/products/featured', locals: { taxon: 'Clothing', products: @featured_clothing } %>
+
 <%= render partial: 'spree/components/presentation/categories' %>
+
+<%= render partial: 'spree/components/products/featured', locals: { taxon: 'Accessories', products: @featured_accessories } %>
 
 <%= render partial: 'spree/components/presentation/featured' %>
 
@@ -13,4 +17,3 @@
     <%= render partial: 'spree/components/products/products', locals: { products: @products } %>
   <% end %>
 </section>
-
