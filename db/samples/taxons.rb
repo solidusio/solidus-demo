@@ -46,6 +46,11 @@ taxons = [
     parent: "Categories"
   },
   {
+    name: "Water Bottles",
+    taxonomy: categories,
+    parent: "Categories"
+  },
+  {
     name: "Caps",
     taxonomy: categories,
     parent: "Accessories",
@@ -68,7 +73,7 @@ taxons = [
   {
     name: "Water Bottles",
     taxonomy: categories,
-    parent: "Accessories",
+    parent: "Water Bottles",
     position: 3,
     products: [
       products[:solidus_water_bottle],

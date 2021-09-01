@@ -88,8 +88,7 @@ products = [
     weight: 0.8,
     height: 20,
     width: 10,
-    depth: 5,
-    featured: true
+    depth: 5
   },
   {
     name: "Developers Cap",
@@ -111,7 +110,8 @@ products = [
     weight: 1,
     height: 5,
     width: 5,
-    depth: 5
+    depth: 5,
+    featured: true
   },
   {
     name: "Insulated Water Bottle - Solidus",
@@ -123,7 +123,7 @@ products = [
     height: 5,
     width: 5,
     depth: 5,
-    featured: true
+    # featured: true
   },
   {
     name: "Insulated Water Bottle - Ruby",
