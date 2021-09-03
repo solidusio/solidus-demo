@@ -34,12 +34,18 @@ module SolidusDemo
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
+    # Load monkey patches
+    monkey_patches = "#{Rails.root}/app/monkey_patches"
+    Rails.autoloaders.main.ignore(monkey_patches)
+    config.to_prepare do
+      Dir.glob("#{monkey_patches}/**/*_monkey_patch.rb").each do |monkey_patch|
+        load monkey_patch
+      end
+    end
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
   end
 end
-
-# Load prependers automatically from app/prependers.
-Prependers.setup_for_rails(namespace: SolidusDemo)

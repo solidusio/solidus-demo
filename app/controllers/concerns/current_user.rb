@@ -14,11 +14,6 @@ module CurrentUser
     token = cookies.signed[:guest_token]
     return Current.user if Current.token == token
 
-    Current.user = Spree::LegacyUser.new(
-      id: 0,
-      spree_roles: Spree::Role.where(name: "admin"),
-      email: "test@solidus.io",
-      spree_api_key: token[0...48],
-    )
+    Current.user = Spree::LegacyUser.solidus_demo_user(token)
   end
 end
