@@ -1,0 +1,32 @@
+@import "../../variables";
+
+.product-card {
+  &_image {
+    transition: all .3s ease;
+  }
+
+  &_header {
+    text-align: left;
+    margin-top: 1.5rem;
+
+    h2 {
+      font-weight: $font-weight-bold;
+      font-size: 1.4rem;
+      text-transform: none;
+    }
+  }
+
+  &_price {
+    font-size: 1.6rem;
+    font-weight: $font-weight-normal;
+    text-align: left;
+    color: $color-dark;
+  }
+
+  &:hover {
+    .product-card_image {
+      transform: none;
+      opacity: .6;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import "../../variables";
+
+.footer {
+  text-align: left;
+
+  .footer-content {
+    max-width: 114rem;
+    margin: 0 auto;
+    grid-column-gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid $color-gray-light;
+    text-align: center;
+    font-size: $font-size-base / 1.1;
+    padding-top: 2rem;
+    max-width: 114rem;
+    margin: 0 auto;
+  }
+
+  .logo {
+    justify-self: end;
+
+    img {
+      max-width: 110px;
+    }
+  }
+}
+
+.static-pages {
+  &__list {
+    list-style-type: none;
+    margin: 0 0 3rem;
+    padding: 0;
+
+    li {
+      align-items: center;
+      display: flex;
+      margin: .5rem 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

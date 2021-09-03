@@ -1,0 +1,16 @@
+@import "../../variables";
+
+.product-submit {
+  button {
+    width: 100%;
+  }
+
+  .horizontal-input-group__input {
+    min-width: 26%;
+    width: auto;
+  }
+
+  .horizontal-input-group__action {
+    min-width: 70%;
+  }
+}

@@ -1,0 +1,14 @@
+@import "../../variables";
+
+.cart-secondary-actions {
+  margin-top: 0;
+  margin-bottom: 2rem;
+
+  @media (min-width: 900px) {
+    margin-bottom: 0;
+  }
+
+  &__continue::before {
+    content: '';
+  }
+}

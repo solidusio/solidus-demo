@@ -1,0 +1,26 @@
+@import "../../variables";
+
+.cart-page {
+  @media (min-width: 900px) {
+    padding-bottom: 18rem;
+  }
+
+  &__coupon-code {
+    @media (min-width: 900px) {
+      margin-top: 0;
+      max-width: 286px;
+    }
+  }
+
+  &__other-actions {
+    align-items: center;
+
+    @media (min-width: 900px) {
+      background: #FBFAFA;
+      padding: 2rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      margin-top: -230px;
+    }
+  }
+}
