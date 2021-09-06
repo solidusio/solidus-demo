@@ -22,8 +22,9 @@
   end
 %>
 
-<% taxons_list = tree(root, current, "#{base_class}__list", depth) %>
+<% taxons_list = tree(root, current, "#{base_class}__list inner", depth) %>
 <% if taxons_list.present? %>
   <%= content_tag :h6, title, class: "#{base_class}__title" if title %>
+  <%= content_tag :button, title, class: "#{base_class}__button toggle-accordion" if title %>
   <%= taxons_list %>
 <% end %>
