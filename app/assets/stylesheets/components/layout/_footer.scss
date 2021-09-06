@@ -6,9 +6,33 @@
   .footer-content {
     max-width: 114rem;
     margin: 0 auto;
-    grid-column-gap: 3rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
+    &__menu {
+      ul {
+        list-style-type: none;
+        margin: 0 -1rem 3rem -1rem;
+        padding: 0;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+    
+        li {
+          padding: 0 1rem;
+        }
+    
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .logo {
+      margin-bottom: 4rem;
+    
+      img {
+        max-width: 110px;
+      }
+    }
   }
 
   .footer-bottom {
@@ -18,31 +42,5 @@
     padding-top: 2rem;
     max-width: 114rem;
     margin: 0 auto;
-  }
-
-  .logo {
-    justify-self: end;
-
-    img {
-      max-width: 110px;
-    }
-  }
-}
-
-.static-pages {
-  &__list {
-    list-style-type: none;
-    margin: 0 0 3rem;
-    padding: 0;
-
-    li {
-      align-items: center;
-      display: flex;
-      margin: .5rem 0;
-    }
-
-    a {
-      text-decoration: none;
-    }
   }
 }

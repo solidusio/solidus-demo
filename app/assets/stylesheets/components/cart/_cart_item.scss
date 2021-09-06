@@ -40,10 +40,29 @@
   }
 }
 
+.cart-item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2rem;
+  align-items: center;
+
+  @media (min-width: 600px) {
+    display: flex;
+  }
+}
+
 .cart-item__quantity,
 .cart-item__price,
 .cart-item__remove {
-  width: 8rem;
+  text-align: left;
+  width: auto;
+  margin: 10px 0 10px 0;
+
+  @media (min-width: 900px) {
+    width: 8rem;
+    text-align: right;
+    margin: 10px 0 10px auto;
+  }
 }
 
 .cart-item__price-single,

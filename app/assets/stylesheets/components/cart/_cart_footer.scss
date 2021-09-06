@@ -14,15 +14,26 @@
 
   &__total {
     text-align: center;
-    min-width: 286px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    & > strong {
+      padding-left: 1rem;
+    }
+
+    @media (min-width: 900px) {
+      min-width: 286px;
+    }
   }
 
   &__primary-action {
     padding: 3rem 0 0 0;
-    min-width: 286px;
+    min-width: 100%;
+
+    @media (min-width: 900px) {
+      min-width: 286px;
+    }
 
     button {
       width: 100%;

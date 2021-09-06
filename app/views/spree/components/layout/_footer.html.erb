@@ -1,7 +1,8 @@
 <footer class="footer">
   <div class="footer-content">
-    <nav class="static-pages">
-      <ul class="static-pages__list">
+    <%= render partial: 'spree/components/brand/logo' %>
+    <nav class="footer-content__menu">
+      <ul>
         <li>
           <a href="https://guides.solidus.io/developers/" target="_blank">Guides</a>
         </li>
@@ -16,7 +17,6 @@
         </li>
       </ul>
     </nav>
-    <%= render partial: 'spree/components/brand/logo' %>
   </div>
   <div class="footer-bottom">
     <p><%= t 'spree.powered_by' %> <%= link_to 'Solidus', 'http://solidus.io/' %></p>
