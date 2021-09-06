@@ -86,4 +86,9 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  # Reset global Current state
+  config.before(:each) do
+    Current.reset
+  end
 end

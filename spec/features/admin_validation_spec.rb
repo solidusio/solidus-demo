@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'admin validation', type: :feature do
 
-  before(:all) do
+  before(:each) do
     Spree::Role.create(name:"admin")
   end
 

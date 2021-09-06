@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe 'sample changes', type: :feature do
   let(:product) { create(:product) }
 
-  before(:all) do
+  before(:each) do
     Spree::Role.create(name:"admin")
   end
 
