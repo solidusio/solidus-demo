@@ -16,4 +16,17 @@ RSpec.describe "Taxon Featured Query", type: :model do
       expect(featured_product.third.featured).to be_truthy
     end
   end
+
+  describe 'all products except' do
+    let(:product_ids) { products.map(&:id) }
+    let(:excluded_products) { product_ids[0..4] }
+    let(:excluded_product) { product_ids[0] }
+
+    it 'returns all products that belong to the taxon except for input ids' do
+      expect(taxon.all_products_except(excluded_products).count).to eq(10)
+      expect(taxon.all_products_except(excluded_products)).to_not include(excluded_products)
+      expect(taxon.all_products_except(excluded_product).count).to eq(14)
+      expect(taxon.all_products_except(excluded_product)).to_not include(excluded_product)
+    end
+  end
 end
