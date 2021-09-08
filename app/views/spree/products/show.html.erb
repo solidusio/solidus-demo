@@ -20,5 +20,10 @@
       <%= render 'spree/components/products/product_info' %>
       <%= render 'spree/components/products/product_properties' %>
     </div>
+
+    <div class="product-page-similar">
+    <h2> You May Also Like </h2>
+      <%= render partial: 'spree/components/products/products', locals: { products: @similar_products } %>
+    </div>
   </article>
 <% end %>
