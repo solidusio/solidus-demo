@@ -1,4 +1,5 @@
 @import "variables";
-@import "base/layout";
-@import "components/buttons";
-@import "components/user-tour";
+
+@import "components/user_tour/base";
+@import "components/user_tour/buttons";
+@import "components/user_tour/widget";

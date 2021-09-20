@@ -9,3 +9,4 @@
 Spree::Core::Engine.load_seed if defined?(Spree::Core)
 Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
 SpreeSample::Engine.load_samples if defined?(SpreeSample)
+

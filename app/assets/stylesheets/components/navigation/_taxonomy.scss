@@ -1,0 +1,82 @@
+@import "../../variables";
+
+.taxonomy {
+  &__list {
+    &.inner {
+      display: none;
+
+      @media (min-width: 600px) {
+        display: block !important;
+      }      
+    }
+
+    li {
+      margin: 1.5rem 0;
+
+      @media (min-width: 600px) {
+        margin: .5rem 0;
+      }
+    }
+  }
+
+  &__title {
+    display: none;
+    visibility: hidden;
+
+    @media (min-width: 600px) {
+      display: block;
+      visibility: visible;
+    }
+  }
+
+  &__button {
+    &.toggle-accordion {
+      text-transform: uppercase;
+      color: $color-dark;
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin: 1rem 0;
+      padding: 0;
+      background: $color-white;
+      border: 0;
+      width: 100%;
+      text-align: left;
+      border-radius: 0;
+      position: relative;
+
+      &::before {
+        content: '';
+        background: asset_data_url("icon-chevron-down_black.svg") no-repeat;
+        background-size: 100% auto;
+        background-position: center;
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+        transition: .4s ease;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        background: $color-dark;
+        height: 1px;
+        margin-top: 2rem;
+      }
+
+      @media (min-width: 600px) {
+        display: none;
+        visibility: hidden;
+      }
+
+      &.js-arrow-up {
+        &::before {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
+

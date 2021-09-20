@@ -1,0 +1,17 @@
+@import "../../variables";
+
+body {
+  position:relative;
+}
+
+/* Keeps the admin styling in line with the tour */
+/* The sidebar makes this difficult */
+.admin-nav-hidden .admin-nav-header{
+  width:52px !important;
+}
+.admin-nav-hidden .main-header{
+  margin-left:0 !important;
+}
+.admin-nav.fits{
+  z-index:9999999;
+}

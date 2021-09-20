@@ -1,0 +1,28 @@
+.categories {
+  justify-content: start;
+
+  @media (min-width: 900px) {
+    justify-content: center;
+  }
+
+  &__list {
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    justify-content: start;
+
+    &::-webkit-scrollbar {
+      display: none; // Chrome, Safari, Opera
+    }
+  
+    -ms-overflow-style: none;  // IE and Edge
+    scrollbar-width: none; // Firefox
+  
+    @media (min-width: 900px) {
+      overflow-y: hidden;
+      overflow-x: auto;
+      justify-content: center;
+    }
+  }
+}

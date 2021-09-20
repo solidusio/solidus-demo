@@ -1,0 +1,46 @@
+@import "../../variables";
+
+.footer {
+  text-align: left;
+
+  .footer-content {
+    max-width: 114rem;
+    margin: 0 auto;
+
+    &__menu {
+      ul {
+        list-style-type: none;
+        margin: 0 -1rem 3rem -1rem;
+        padding: 0;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+    
+        li {
+          padding: 0 1rem;
+        }
+    
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .logo {
+      margin-bottom: 4rem;
+    
+      img {
+        max-width: 110px;
+      }
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid $color-gray-light;
+    text-align: center;
+    font-size: $font-size-base / 1.1;
+    padding-top: 2rem;
+    max-width: 114rem;
+    margin: 0 auto;
+  }
+}

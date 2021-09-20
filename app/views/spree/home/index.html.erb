@@ -1,0 +1,17 @@
+<%= render partial: 'spree/components/presentation/hero' %>
+
+<%= render partial: 'spree/components/products/featured', locals: { taxon: 'Clothing', products: @featured_clothing } %>
+
+<%= render partial: 'spree/components/presentation/categories' %>
+
+<%= render partial: 'spree/components/products/featured', locals: { taxon: 'Accessories', products: @featured_accessories } %>
+
+<%= render partial: 'spree/components/presentation/banner' %>
+
+<%= render partial: 'spree/components/presentation/about' %>
+
+<section class="products-wrapper">
+  <% cache(cache_key_for_products) do %>
+    <%= render partial: 'spree/components/products/products', locals: { products: @products } %>
+  <% end %>
+</section>

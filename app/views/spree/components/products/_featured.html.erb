@@ -1,0 +1,9 @@
+<% unless products.nil? || products&.empty? %>
+  <div class = '<%= "featured-#{taxon.downcase}" %> featured-container'>
+    <h2 class="featured-container__title">Featured <%= taxon %></h2>
+
+    <section class="products-wrapper">
+        <%= render partial: 'spree/components/products/products', locals: { products: products } %>
+    </section>
+  </div>
+<% end %>
