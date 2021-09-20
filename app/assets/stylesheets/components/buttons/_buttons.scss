@@ -1,0 +1,35 @@
+@import "../../variables";
+
+.button {
+  text-decoration:none;
+  display: inline-block;
+  transition: all .3 ease;
+  cursor: pointer;
+}
+
+.button-secondary {
+  background: $color-dark;
+  color: $color-white;
+  border-radius: 100px;
+  border: 0;
+  margin-top: 4rem;
+  padding: 1.5rem 3.5rem;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-size: clamp(1.8rem, 2vw, 2.2rem);
+
+  &:hover,
+  &:focus {
+    background: $color-white;
+    color: $color-dark;
+  }
+}
+
+.button-tertiary {
+  background: $color-blue;
+  color: $color-white;
+  text-transform: uppercase;
+  padding: 1.5rem 2.5rem;
+  border-radius: 50px;
+  border: 0;
+}

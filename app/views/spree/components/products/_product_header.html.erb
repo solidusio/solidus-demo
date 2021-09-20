@@ -1,0 +1,18 @@
+<header class="product-header">
+  <h1 class="product-header__title" itemprop="name">
+    <%= @product.name %>
+  </h1>
+  <h2 class="product-header__title" id="product-price">
+    <%= content_tag(
+      :span,
+      display_price(@product),
+      itemprop: 'price',
+      content: @product.price_for(current_pricing_options).to_d,
+      data: { js: 'price' }
+    ) %>
+    <span
+      itemprop="priceCurrency"
+      content="<%= current_pricing_options.currency %>"
+    ></span>
+  </h2>
+</header>

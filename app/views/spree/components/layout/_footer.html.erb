@@ -1,0 +1,25 @@
+<footer class="footer">
+  <div class="footer-content">
+    <%= render partial: 'spree/components/brand/logo' %>
+    <nav class="footer-content__menu">
+      <ul>
+        <li>
+          <a href="https://guides.solidus.io/developers/" target="_blank">Guides</a>
+        </li>
+        <li>
+          <a href="https://solidus.io/features/" target="_blank">Features</a>
+        </li>
+        <li>
+          <a href="https://solidus.io/integrations/" target="_blank">Integrations</a>
+        </li>
+        <li>
+          <a href="https://solidus.io/contact/" target="_blank">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <p><%= t 'spree.powered_by' %> <%= link_to 'Solidus', 'http://solidus.io/' %></p>
+  </div>
+  <%= render 'spree/components/navigation/locale_selector' %>
+</footer>

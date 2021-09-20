@@ -1,0 +1,12 @@
+@import "../../variables";
+
+.product-description__title {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.product-header {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $color-gray-light;
+  margin-bottom: 3rem;
+}

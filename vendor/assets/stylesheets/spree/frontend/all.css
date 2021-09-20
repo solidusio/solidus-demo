@@ -8,6 +8,7 @@
  *= require_tree .
  *= require spree/shared/bootstrap_import
  *= require spree/frontend/solidus_starter_frontend
+ *= require demo_style
  *= require guided_tour
  *= require spree/frontend/solidus_user_guides
  *= require spree/frontend/solidus_paypal_commerce_platform
