@@ -6,7 +6,7 @@ spree/home:
       body_text: |+
         Welcome to the Solidus Guided Tour. We'll take you through some of what we think makes Solidus special.
 
-        Buckle up and get ready, and click the "Next" button on the right to begin!{strong:bold text'}
+        Buckle up and get ready, and click the "Next" button on the right to begin!
     customize:
       button_action: next
       title: Fully Customizable
@@ -16,7 +16,7 @@ spree/home:
         The frontend you're seeing is the pre-built, default frontend - but everything here can be tossed out and tweaked for even the most edge-case uses. It's not just encouraged - it's expected!
     taxon_menu:
       button_action: continue
-      button_location: /t/brand/solidus-apparel
+      button_location: /t/brand/solidus
       title: Taxon Menu
       selector: .categories #The selector for the object that will be highlighted
       body_text: |+
@@ -27,7 +27,7 @@ spree/taxons:
   show:
     filtering:
       button_action: continue
-      button_location: /products/monogram-hoodie
+      button_location: /products/solidus-t-shirt
       title: Taxon Filtering
       selector: aside
       body_text: |+
@@ -43,12 +43,12 @@ spree/products:
     variant_selector:
       button_action: next
       title: Variants
-      selector: .variant-container
+      selector: .product-variants
       body_text: |+
         Variants are a great way to give your customers options, so we made it as simple as possible to create & manage as many variants as you need.
     images:
       button_action: continue
-      button_location: /products?&guided_tour=true
+      button_location: /products?utf8=✓&taxon=&keywords=solidus
       title: Product Images
       selector: .product-page__images
       body_text: |+
@@ -130,7 +130,7 @@ spree/admin/products:
   index:
     product_list:
       button_action: continue
-      button_location: /admin/products/monogram-hoodie/edit
+      button_location: /admin/products/solidus-t-shirt/edit
       title: Products
       selector: "#wrapper"
       body_text: |+
@@ -146,7 +146,7 @@ spree/admin/products:
         Here's the product edit page. Highlighted below are fields for Name, Description, and Slug. Slugs are created automatically and in a human readable format, but you can override that here if you wish.
     side_fields:
       button_acton: continue
-      button_location: /admin/products/monogram-hoodie/images
+      button_location: /admin/products/solidus-t-shirt/images
       title: Editing a Product
       selector: ".right.col-3"
       body_text: |+
@@ -155,7 +155,7 @@ spree/admin/images:
   index:
     display_images:
       button_action: continue
-      button_location: /admin/products/monogram-hoodie/variants
+      button_location: /admin/products/solidus-t-shirt/variants
       title: Product Images
       selector: .content-main
       body_text: |+
@@ -166,7 +166,7 @@ spree/admin/variants:
   index:
     variants:
       button_action: continue
-      button_location: /admin/products/monogram-hoodie/stock
+      button_location: /admin/products/solidus-t-shirt/stock
       title: Product Variants
       selector: .content-main
       body_text: |+

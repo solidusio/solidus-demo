@@ -11,6 +11,5 @@
 //= require bootstrap-sprockets
 //= require_tree .
 //= require guided_tour
-//= require accordion
 //= require spree/backend/solidus_user_guides
 //= require spree/backend/solidus_paypal_commerce_platform
