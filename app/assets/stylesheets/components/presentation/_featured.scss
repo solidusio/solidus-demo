@@ -1,0 +1,26 @@
+@import "../../variables";
+
+.featured-container {
+  padding: 5rem 0;
+  margin-top: 7rem;
+
+  &__title {
+    font-size: 4rem;
+    font-size: clamp(4rem, 2vw, 6rem);
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  &:last-of-type {
+    background: $color-gray-lighter;
+
+    .products-grid {
+      max-width: 77rem;
+      margin: 0 auto;
+    
+      @media(min-width: 900px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}

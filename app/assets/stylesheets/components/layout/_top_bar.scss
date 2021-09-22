@@ -1,0 +1,7 @@
+@import "../../variables";
+
+.top-bar__search {
+  @media (min-width: 900px) {
+    flex: 0 1 auto;
+  }
+}

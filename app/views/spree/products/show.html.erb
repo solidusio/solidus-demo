@@ -1,0 +1,29 @@
+<% @body_id = 'product-details' %>
+
+<% cache [I18n.locale, current_pricing_options, @product] do %>
+  <article class="product-page" itemscope itemtype="http://schema.org/Product">
+    <div class="product-page-row">
+      <div class="product-page__images">
+        <%= render 'spree/components/products/product_image' %>
+        <%= render 'spree/components/products/product_thumbnails' %>
+      </div>
+
+      <div class="product-page__info">
+        <%= render 'spree/components/products/product_header' %>
+        <%= render 'spree/components/products/product_promotions' %>
+        <%= render 'spree/components/products/product_form' %>
+        <%= render 'spree/components/products/product_taxons' %>
+      </div>
+    </div>
+
+    <div class="product-page-row">
+      <%= render 'spree/components/products/product_info' %>
+      <%= render 'spree/components/products/product_properties' %>
+    </div>
+
+    <div class="product-page-similar">
+    <h2> You May Also Like </h2>
+      <%= render partial: 'spree/components/products/products', locals: { products: @similar_products } %>
+    </div>
+  </article>
+<% end %>

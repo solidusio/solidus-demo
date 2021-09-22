@@ -1,0 +1,22 @@
+<div class="products">
+  <aside>
+    <% if "spree/products" == params[:controller] && @taxon %>
+      <%= render partial: 'spree/components/search/filters' %>
+    <% else %>
+      <%= render partial: 'spree/components/navigation/taxonomies' %>
+    <% end %>
+  </aside>
+  <section class="products_section">
+    <% if params[:keywords] %>
+      <% if @products.empty? %>
+        <h6>
+          <%= t('spree.no_products_found') %>
+        </h6>
+      <% else %>
+        <%= render partial: 'spree/components/products/products', locals: { products: @products, taxon: @taxon } %>
+      <% end %>
+    <% else %>
+      <%= render partial: 'spree/components/products/products', locals: { products: @products, taxon: @taxon } %>
+    <% end %>
+  </section>
+</div>

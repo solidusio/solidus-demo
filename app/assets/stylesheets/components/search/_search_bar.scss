@@ -1,0 +1,18 @@
+@import "../../variables";
+
+.search-bar {
+  border: 0;
+
+  &__input {
+    border-bottom: 1px solid #d8d8dd;
+    padding: 0 1rem;
+    border-radius: 0;
+    -webkit-appearance: none;
+  }
+
+  &__button {
+    border-left: 0;
+    background: transparent;
+    padding: 0 2rem 0 1rem;
+  }
+}

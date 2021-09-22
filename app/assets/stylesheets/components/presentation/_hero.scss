@@ -1,0 +1,47 @@
+@import "../../variables";
+
+.hero {
+  background: asset_data_url("hero-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: top center;
+
+  &-title {
+    display: inline-block;
+    font-size: 4rem;
+    font-size: clamp(4rem, 5vw, 8rem);
+    color: $color-dark;
+    text-decoration: underline;
+    text-decoration-color: $color-white;
+    text-decoration-thickness: clamp(4rem, 5vw, 6rem);
+    text-underline-offset: clamp(-6.6rem, 5vw, -7.5rem);
+    position: relative;
+    text-decoration-skip-ink: none;
+    z-index: 1;
+  
+    @supports not (text-decoration-skip-ink: none) {
+      &::before {
+        content: '';
+        position: absolute;
+        background: $color-white;
+        height: clamp(4rem, 5vw, 6rem);
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+      }
+    }
+  }
+
+  .subtitle {
+    font-size: 2rem;
+    margin-top: .5rem;
+    color: $color-dark;
+  }
+}
+
+.hero__container {
+  max-width: 100%;
+  padding: 15rem 1rem;
+  text-align: center;
+  flex-direction: column;
+}
