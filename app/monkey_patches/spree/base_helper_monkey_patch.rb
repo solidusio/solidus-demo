@@ -1,5 +1,5 @@
 module Spree
-  module UpdateCartLink
+  module BaseHelper
     def link_to_cart(text = nil)
       text = text ? h(text) : t('spree.cart')
       css_class = nil
@@ -14,7 +14,5 @@ module Spree
       end
       link_to text.html_safe, spree.cart_path, class: "cart-info #{css_class}"
     end
-
-    BaseHelper.prepend(UpdateCartLink)
   end
 end
