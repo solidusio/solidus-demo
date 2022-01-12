@@ -2,6 +2,18 @@
 
 This is the repo for the Solidus Demo Site.
 
+## Running locally
+
+After cloning the repo, `cd` into the folder and run the following commands:
+
+```
+bundle install
+yarn install
+rails db:create db:migrate db:seed
+```
+
+The app runs at http://localhost:3000. The admin interface can be accessed at http://localhost:3000/admin/.
+
 ## Authentication
 
 Currently, every request is assumed to have come from an admin user. (see `lib/spree/core/controller_helpers/auth_decorator.rb` for more info)
