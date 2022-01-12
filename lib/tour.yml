@@ -6,7 +6,7 @@ spree/home:
       body_text: |+
         Welcome to the Solidus Guided Tour. We'll take you through some of what we think makes Solidus special.
 
-        Buckle up and get ready, and click the "Next" button on the right to begin!{strong:bold text'}
+        Buckle up and get ready, and click the "Next" button on the right to begin!
     customize:
       button_action: next
       title: Fully Customizable
