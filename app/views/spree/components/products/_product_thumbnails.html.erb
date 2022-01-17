@@ -1,7 +1,9 @@
 <ul class="product-thumbnails">
+  <% displayed_images = [] %>
   <% @product.gallery.images.each do |image| %>
+    <% next if image.viewable_id != @product.master.id || image.attachment_file_name.in?(displayed_images) %>
 
-    <% next if image.viewable_id != @product.master.id %>
+    <% displayed_images << image.attachment_file_name %>
     <%= content_tag(
       :li,
       class: 'product-thumbnails__all',
@@ -13,7 +15,9 @@
 
   <% if @product.has_variants? %>
     <% @product.gallery.images.each do |image| %>
-      <% next if image.viewable_id == @product.master.id %>
+      <% next if image.viewable_id == @product.master.id || image.attachment_file_name.in?(displayed_images) %>
+
+      <% displayed_images << image.attachment_file_name %>
       <%= content_tag(
         :li,
         class: 'product-thumbnails__variant',

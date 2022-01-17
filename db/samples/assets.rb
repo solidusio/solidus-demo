@@ -90,73 +90,17 @@ images = {
   ]
 }
 
-appended_images = []
 products.each do |key, product|
   product.reload.variants.each do |variant|
     color = variant.option_value("clothing-color").downcase
     main_image = image("#{key}_#{color}", "jpg")
-    next if !main_image || appended_images.include?(main_image)
+    next if !main_image
 
-    appended_images << main_image
     File.open(main_image) do |f|
       variant.images.create!(attachment: f)
     end
   end
 end
-# products[:solidus_monogram_tshirt].reload.variants.each do |variant|
-#   color = variant.option_value("clothing-color").downcase
-#   main_image = image("solidus_monogram_tshirt_#{color}", "jpg")
-#   next if duplicates.include?(main_image)
-
-#   duplicates << main_image
-#   File.open(main_image) do |f|
-#     variant.images.create!(attachment: f)
-#   end
-# end
-
-# products[:solidus_logo_tshirt].reload.variants.each do |variant|
-#   color = variant.option_value("clothing-color").downcase
-#   main_image = image("solidus_logo_tshirt_#{color}", "jpg")
-#   next if duplicates.include?(main_image)
-
-#   duplicates << main_image
-#   File.open(main_image) do |f|
-#     variant.images.create!(attachment: f)
-#   end
-# end
-
-# products[:ruby_tshirt].reload.variants.each do |variant|
-#   color = variant.option_value("clothing-color").downcase
-#   main_image = image("ruby_tshirt_#{color}", "jpg")
-#   next if duplicates.include?(main_image)
-
-#   duplicates << main_image
-#   File.open(main_image) do |f|
-#     variant.images.create!(attachment: f)
-#   end
-# end
-
-# products[:solidus_logo_hoodie].reload.variants.each do |variant|
-#   color = variant.option_value("clothing-color").downcase
-#   main_image = image("solidus_logo_hoodie_#{color}", "jpg")
-#   next if duplicates.include?(main_image)
-
-#   duplicates << main_image
-#   File.open(main_image) do |f|
-#     variant.images.create!(attachment: f)
-#   end
-# end
-
-# products[:solidus_monogram_hoodie].reload.variants.each do |variant|
-#   color = variant.option_value("clothing-color").downcase
-#   main_image = image("solidus_monogram_hoodie_#{color}", "jpg")
-#   next if duplicates.include?(main_image)
-
-#   duplicates << main_image
-#   File.open(main_image) do |f|
-#     variant.images.create!(attachment: f)
-#   end
-# end
 
 images.each do |variant, attachments|
   puts "Loading images for #{variant.product.name}"
