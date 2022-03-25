@@ -13,6 +13,7 @@
 //= require spree/frontend/solidus_starter_frontend
 //= require guided_tour
 //= require accordion
+//= require mobile_menu
 //= require spree/frontend/solidus_user_guides
 //= require spree/frontend/solidus_paypal_commerce_platform
 //= require product_selection_component
