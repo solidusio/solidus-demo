@@ -1,31 +1,32 @@
 // Colors
-$color-dark:            #24282F;
-$color-white:           #FFFFFF;
-$color-blue:            #3C76F0;
-$color-blue-light:      #6391F3;
-$color-green:           #66C789;
-$color-green-light:     #90DFAD;
-$color-gray-light:      #ECECEC;
-$color-gray-lighter:    #FAFBFC;
+$color-dark: #24282f;
+$color-white: #ffffff;
+$color-blue: #3c76f0;
+$color-blue-light: #6391f3;
+$color-green: #66c789;
+$color-green-light: #90dfad;
+$color-gray: #f2f2f2;
+$color-gray-light: #ececec;
+$color-gray-lighter: #fafbfc;
 
 // Typo
-$font-size-base:        14px;
-$font-weight-normal:    400;
-$font-weight-bold:      600;
+$font-size-base: 14px;
+$font-weight-normal: 400;
+$font-weight-bold: 600;
 
-$font-color-base:       $color-dark;
+$font-color-base: $color-dark;
 
-$line-height-base:      1.5em;
-$line-height-headings:  1.1em;
+$line-height-base: 1.5em;
+$line-height-headings: 1.1em;
 
 // Buttons
-$button-font-weight:    600;
+$button-font-weight: 600;
 
 // Utilities
-$spacer:                15px;
+$spacer: 15px;
 
 // Tour widget
-$toggler-height:        50px;
-$toggler-height-open:   28px;
-$widget-inner-height:   90px;
-$widget-body-height:    136px;
+$toggler-height: 50px;
+$toggler-height-open: 28px;
+$widget-inner-height: 90px;
+$widget-body-height: 136px;

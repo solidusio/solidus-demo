@@ -1,7 +1,75 @@
 @import "../../variables";
 
-.top-bar__search {
-  @media (min-width: 900px) {
-    flex: 0 1 auto;
+.top-bar {
+  column-gap: 10px;
+
+  &__search {
+    display: none;
+
+    @media (min-width: 900px) {
+      flex: 0 1 auto;
+      display: block;
+    }
+
+    &--mobile {
+      display: block;
+
+      .search-bar__button {
+        padding: 0;
+      }
+
+      @media (min-width: 900px) {
+        display: none;
+      }
+    }
+  }
+
+  &__toggle {
+    order: 4;
+    display: block;
+    cursor: pointer;
+    padding: 20px 5px;
+    user-select: none;
+    order: 2;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    z-index: 1000;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    @media (min-width: 900px) {
+      display: none;
+    }
+
+    .icon {
+      display: block;
+      position: relative;
+      transition: background 0.2s ease-out;
+      margin-top: -2px;
+      width: 30px;
+
+      &::after,
+      &::before {
+        background: #000;
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all 0.2s ease-out;
+        width: 100%;
+        height: 2px;
+        border-radius: 2px;
+      }
+
+      &::before {
+        top: 6px;
+      }
+
+      &::after {
+        top: -6px;
+      }
+    }
   }
 }
