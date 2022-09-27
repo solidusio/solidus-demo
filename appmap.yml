@@ -1,0 +1,14 @@
+---
+name: solidus-demo
+packages:
+- path: app
+- path: lib
+- gem: solidus_core
+- gem: solidus_api
+- gem: solidus_backend
+- gem: solidus_sample
+- gem: solidus_starter_frontend
+- gem: solidus_user_guides
+- gem: solidus_paypal_commerce_platform
+- gem: solidus_graphql_api
+exclude: []

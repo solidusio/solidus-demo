@@ -113,6 +113,11 @@ GEM
     apparition (0.6.0)
       capybara (~> 3.13, < 4)
       websocket-driver (>= 0.6.5)
+    appmap (0.93.0)
+      activesupport
+      method_source
+      rack
+      reverse_markdown
     autoprefixer-rails (10.3.1.0)
       execjs (~> 2)
     awesome_nested_set (3.4.0)
@@ -323,6 +328,8 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    reverse_markdown (2.1.1)
+      nokogiri
     rspec-core (3.9.3)
       rspec-support (~> 3.9.3)
     rspec-expectations (3.9.4)
@@ -462,6 +469,7 @@ PLATFORMS
 
 DEPENDENCIES
   apparition
+  appmap
   binding_of_caller
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.4.1)
@@ -503,4 +511,4 @@ RUBY VERSION
    ruby 2.6.6p146
 
 BUNDLED WITH
-   2.2.25
+   2.2.30

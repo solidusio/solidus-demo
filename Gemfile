@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
 
+gem 'appmap', group: %i[test development]
+
 gem 'rails', '~> 6.1'
 # Use pg as the database for Active Record
 gem 'pg'
