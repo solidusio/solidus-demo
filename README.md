@@ -10,6 +10,7 @@ After cloning the repo, `cd` into the folder and run the following commands:
 bundle install
 yarn install
 rails db:create db:migrate db:seed
+rails sample_records:appmap
 ```
 
 The app runs at http://localhost:3000. The admin interface can be accessed at http://localhost:3000/admin/.
