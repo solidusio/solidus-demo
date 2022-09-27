@@ -158,6 +158,18 @@ products = [
     width: 10,
     depth: 5,
     featured: true
+  },
+  {
+    name: "AppMap Hoodie",
+    tax_category: tax_category,
+    shipping_category: shipping_category,
+    price: 15.99,
+    eur_price: 14,
+    weight: 0.5,
+    height: 20,
+    width: 10,
+    depth: 5,
+    featured: true
   }
 ]
 

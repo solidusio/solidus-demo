@@ -17,6 +17,7 @@ products[:solidus_tote] = Spree::Product.find_by!(name: "Cotton Tote - Solidus")
 products[:ruby_tote] = Spree::Product.find_by!(name: "Cotton Tote - Ruby")
 products[:solidus_water_bottle] = Spree::Product.find_by!(name: "Insulated Water Bottle - Solidus")
 products[:ruby_water_bottle] = Spree::Product.find_by!(name: "Insulated Water Bottle - Ruby")
+products[:appmap_hoodie] = Spree::Product.find_by!(name: "AppMap Hoodie")
 
 def image(name, type = "jpg")
   images_path = Pathname.new(Rails.root.join("db/samples/images"))
@@ -86,6 +87,11 @@ images = {
   products[:ruby_water_bottle].master => [
     {
       attachment: image("ruby_water_bottle")
+    }
+  ],
+  products[:appmap_hoodie].master => [
+    {
+      attachment: image("appmap_hoodie_front", "png")
     }
   ]
 }
