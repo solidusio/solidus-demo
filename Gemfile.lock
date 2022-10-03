@@ -1,10 +1,10 @@
 GIT
   remote: https://github.com/nebulab/solidus_paypal_commerce_platform
-  revision: d99e42680a799cb616a93fd0cf4c0418edd76bb0
+  revision: 1e3a3a4cee32f278310688e0f42dff129f2f3ea5
   specs:
-    solidus_paypal_commerce_platform (0.3.2)
+    solidus_paypal_commerce_platform (0.4.0)
       deface (~> 1.5)
-      paypal-checkout-sdk
+      paypalhttp
       solidus_core (>= 2.0.0, < 4)
       solidus_support (>= 0.8.0, < 1)
       solidus_webhooks (~> 0.2)
@@ -38,6 +38,16 @@ GIT
       graphql (>= 1.10, < 1.12)
       solidus_core (>= 2.5, < 4)
       solidus_support (~> 0.6)
+
+GIT
+  remote: https://github.com/solidusio/solidus_stripe
+  revision: a817c407d75c53b8321a3f6fd997925654ec33ad
+  specs:
+    solidus_stripe (4.3.0)
+      activemerchant (>= 1.105)
+      rexml
+      solidus_core (>= 2.3, < 4)
+      solidus_support (~> 0.8)
 
 GEM
   remote: https://rubygems.org/
@@ -163,10 +173,11 @@ GEM
     concurrent-ruby (1.1.9)
     crass (1.0.6)
     debug_inspector (0.0.3)
-    deface (1.8.1)
+    deface (1.9.0)
+      actionview (>= 5.2)
       nokogiri (>= 1.6)
       polyglot
-      rails (>= 5.2)
+      railties (>= 5.2)
       rainbow (>= 2.1.0)
     diff-lcs (1.4.4)
     discard (1.2.0)
@@ -263,9 +274,7 @@ GEM
       cloudinary (~> 1.1)
     paranoia (2.4.3)
       activerecord (>= 4.0, < 6.2)
-    paypal-checkout-sdk (1.0.3)
-      paypalhttp (~> 1.0.0)
-    paypalhttp (1.0.0)
+    paypalhttp (2.0.1)
     pg (1.2.3)
     polyglot (0.3.5)
     popper_js (1.16.0)
@@ -309,7 +318,7 @@ GEM
       method_source
       rake (>= 0.13)
       thor (~> 1.0)
-    rainbow (3.0.0)
+    rainbow (3.1.1)
     rake (13.0.6)
     ransack (2.4.2)
       activerecord (>= 5.2.4)
@@ -330,6 +339,7 @@ GEM
       netrc (~> 0.8)
     reverse_markdown (2.1.1)
       nokogiri
+    rexml (3.2.5)
     rspec-core (3.9.3)
       rspec-support (~> 3.9.3)
     rspec-expectations (3.9.4)
@@ -500,6 +510,7 @@ DEPENDENCIES
   solidus_paypal_commerce_platform!
   solidus_sample
   solidus_starter_frontend!
+  solidus_stripe!
   solidus_user_guides!
   spring
   spring-watcher-listen (~> 2.0.0)
