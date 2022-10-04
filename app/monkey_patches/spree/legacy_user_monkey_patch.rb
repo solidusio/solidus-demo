@@ -6,7 +6,7 @@ module Spree
       new(
         id: 0,
         spree_roles: Spree::Role.where(name: 'admin'),
-        email: 'test@solidus.io',
+        email: 'example@appmap.io',
         spree_api_key: token[0...48]
       )
     end
