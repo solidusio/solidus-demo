@@ -1,5 +1,7 @@
 ---
 name: solidus-demo
+language: ruby
+appmap_dir: tmp/appmap
 packages:
 - path: app
 - path: lib
