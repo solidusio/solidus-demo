@@ -9,11 +9,9 @@
     display: inline-block;
     font-size: 4rem;
     font-size: clamp(4rem, 5vw, 8rem);
-    color: $color-dark;
-    text-decoration: underline;
-    text-decoration-color: $color-white;
-    text-decoration-thickness: clamp(4rem, 5vw, 6rem);
-    text-underline-offset: clamp(-6.6rem, 5vw, -7.5rem);
+    color: white;
+    background-color: black;
+    padding: 10px;
     position: relative;
     text-decoration-skip-ink: none;
     z-index: 1;

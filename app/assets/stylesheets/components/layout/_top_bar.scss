@@ -1,5 +1,13 @@
 @import "../../variables";
 
+.top-bar {
+  .logo {
+    img {
+      width: 220px;
+    }
+  }
+}
+
 .top-bar__search {
   @media (min-width: 900px) {
     flex: 0 1 auto;
