@@ -1,6 +1,7 @@
 @import "../../variables";
 
 .tour-widget {
+  display: none;
   box-sizing: border-box;
   font-size: $font-size-base;
   line-height: $line-height-base;
@@ -99,7 +100,7 @@
 .tour-widget.open .tour-whitebox {
   top: $widget-body-height + $toggler-height-open;
   position: absolute;
-  display: block;
+  display: none;
   left:0;
   width: 100%;
   height: 100%;
