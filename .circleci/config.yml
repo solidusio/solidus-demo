@@ -1,15 +1,16 @@
 version: 2.1
 
 orbs:
-  ruby: circleci/ruby@1.0
-  node: circleci/node@2
+  ruby: circleci/ruby@2
+  node: circleci/node@5
+  browser-tools: circleci/browser-tools@1.1
 
 jobs:
   test:
     parallelism: 3
     docker:
-      - image: circleci/ruby:2.6.6-node-browsers
-      - image: circleci/postgres:9.5-alpine
+      - image: cimg/ruby:2.7.6-browsers
+      - image: cimg/postgres:14.5
         environment:
           POSTGRES_USER: test-pguser
           POSTGRES_DB: sample-test
@@ -23,10 +24,10 @@ jobs:
       RAILS_ENV: test
     steps:
       - checkout
+      - browser-tools/install-chrome
       - ruby/install-deps
       - node/install-packages:
           pkg-manager: yarn
-          cache-key: "yarn.lock"
       - run:
           name: Wait for DB
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
