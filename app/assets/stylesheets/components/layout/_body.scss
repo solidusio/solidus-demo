@@ -1,0 +1,9 @@
+body {
+  &.js-show-menu {
+    overflow: hidden;
+
+    @media (min-width: 900px) {
+      overflow: auto;
+    }
+  }
+}
