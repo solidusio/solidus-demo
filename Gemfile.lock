@@ -22,14 +22,6 @@ GIT
       truncate_html (~> 0.9, >= 0.9.2)
 
 GIT
-  remote: https://github.com/seand7565/solidus_user_guides
-  revision: 1248b59ebd198d033af7d4106d368bb2f0a6ae52
-  specs:
-    solidus_user_guides (0.0.1)
-      solidus_core (>= 2.0.0, < 3)
-      solidus_support (~> 0.4)
-
-GIT
   remote: https://github.com/solidusio-contrib/solidus_graphql_api
   revision: 9629e8d6b5ee5767265c3e1068a13b2677430a98
   specs:
@@ -524,7 +516,6 @@ DEPENDENCIES
   solidus_paypal_commerce_platform!
   solidus_sample (~> 2.11.0)
   solidus_starter_frontend!
-  solidus_user_guides!
   standard
   turbolinks
   web-console
