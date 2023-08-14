@@ -517,12 +517,12 @@ DEPENDENCIES
   rspec_junit_formatter
   sass-rails
   sentry-raven
-  solidus_api
-  solidus_backend
-  solidus_core
+  solidus_api (~> 2.11.0)
+  solidus_backend (~> 2.11.0)
+  solidus_core (~> 2.11.0)
   solidus_graphql_api!
   solidus_paypal_commerce_platform!
-  solidus_sample
+  solidus_sample (~> 2.11.0)
   solidus_starter_frontend!
   solidus_user_guides!
   standard
