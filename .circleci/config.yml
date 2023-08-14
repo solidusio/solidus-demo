@@ -35,9 +35,24 @@ jobs:
           name: Database setup
           command: bundle exec rails db:schema:load --trace
       - ruby/rspec-test # Run rspec in parallel
+  lint:
+    docker:
+      - image: cimg/ruby:2.7.6
+    environment:
+      BUNDLE_JOBS: "3"
+      BUNDLE_RETRY: "3"
+      RAILS_ENV: test
+    steps:
+      - checkout
+      - browser-tools/install-chrome
+      - ruby/install-deps
+      - run:
+          name: Run Standard
+          command: bundle exec standardrb
 
 workflows:
   version: 2
   build_and_test:
     jobs:
       - test
+      - lint
