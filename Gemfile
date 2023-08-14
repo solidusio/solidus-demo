@@ -18,6 +18,7 @@ gem "rack-cors"
 # Assets
 gem "sass-rails"
 
+# Turbo
 gem "turbolinks"
 
 # Solidus
@@ -28,9 +29,6 @@ gem "solidus_sample", "~> 2.11.0"
 gem "solidus_starter_frontend", git: "https://github.com/nebulab/solidus_starter_frontend"
 gem "solidus_paypal_commerce_platform", git: "https://github.com/nebulab/solidus_paypal_commerce_platform"
 gem "solidus_graphql_api", git: "https://github.com/solidusio-contrib/solidus_graphql_api"
-
-# Use rspec for testing
-gem "rspec-rails"
 
 # Bootstrap
 gem "bootstrap", "~> 4.4.1"
@@ -54,7 +52,8 @@ group :development do
 end
 
 group :test do
-  # System testing
+  # Testing
+  gem "rspec-rails"
   gem "capybara"
   gem "apparition"
   gem "factory_bot"
