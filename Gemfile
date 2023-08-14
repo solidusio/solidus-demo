@@ -50,13 +50,13 @@ end
 
 group :development do
   # Debugging
-  gem "web-console", ">= 3.3.0"
-  gem "listen", ">= 3.0.5", "< 3.2"
+  gem "web-console"
+  gem "listen"
 end
 
 group :test do
   # System testing
-  gem "capybara", ">= 2.15"
+  gem "capybara"
   gem "apparition"
   gem "factory_bot"
   gem "rspec_junit_formatter"
@@ -64,7 +64,7 @@ end
 
 group :production do
   # Infrastructure
-  gem "cloudinary", "~> 1.11"
+  gem "cloudinary"
   gem "paperclip-cloudinary"
 
   # Error monitoring

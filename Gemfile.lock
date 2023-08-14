@@ -500,11 +500,11 @@ DEPENDENCIES
   bootsnap
   bootstrap (~> 4.4.1)
   byebug
-  capybara (>= 2.15)
-  cloudinary (~> 1.11)
+  capybara
+  cloudinary
   factory_bot
   jquery-rails
-  listen (>= 3.0.5, < 3.2)
+  listen
   paperclip-cloudinary
   pg
   pry
@@ -527,7 +527,7 @@ DEPENDENCIES
   solidus_user_guides!
   standard
   turbolinks
-  web-console (>= 3.3.0)
+  web-console
 
 RUBY VERSION
    ruby 2.7.6p219
