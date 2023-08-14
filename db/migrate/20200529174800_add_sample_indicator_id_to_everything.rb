@@ -2,7 +2,7 @@ class AddSampleIndicatorIdToEverything < ActiveRecord::Migration[5.2]
   def change
     tables = ActiveRecord::Base.connection.tables - [
       ActiveRecord::SchemaMigration.table_name,
-      ActiveRecord::InternalMetadata.table_name,
+      ActiveRecord::InternalMetadata.table_name
     ]
 
     tables.each do |table|

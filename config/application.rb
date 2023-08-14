@@ -1,6 +1,6 @@
-require_relative 'boot'
+require_relative "boot"
 
-require 'rails/all'
+require "rails/all"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -9,18 +9,18 @@ Bundler.require(*Rails.groups)
 module SolidusDemo
   class Application < Rails::Application
     # Load application's model / class decorators
-    initializer 'spree.decorators' do |app|
+    initializer "spree.decorators" do |app|
       config.to_prepare do
-        Dir.glob(Rails.root.join('app/**/*_decorator*.rb')) do |path|
+        Dir.glob(Rails.root.join("app/**/*_decorator*.rb")) do |path|
           require_dependency(path)
         end
       end
     end
 
     # Load application's view overrides
-    initializer 'spree.overrides' do |app|
+    initializer "spree.overrides" do |app|
       config.to_prepare do
-        Dir.glob(Rails.root.join('app/overrides/*.rb')) do |path|
+        Dir.glob(Rails.root.join("app/overrides/*.rb")) do |path|
           require_dependency(path)
         end
       end

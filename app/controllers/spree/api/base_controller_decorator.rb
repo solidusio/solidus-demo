@@ -15,4 +15,3 @@ module Spree::Api::BaseControllerDecorator
 
   Spree::Api::BaseController.prepend self
 end
-

@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# frozen_string_literal: true
-
 module Spree
   module FeaturedSimilarProducts
     def self.prepended(base)
@@ -10,7 +8,7 @@ module Spree
 
     def similar_products(limit = 3)
       taxons.map do |taxon|
-        taxon.all_products_except(self.id).order('RANDOM()')
+        taxon.all_products_except(id).order("RANDOM()")
       end.flatten.uniq.first(limit)
     end
 

@@ -5,13 +5,13 @@ products =
     "Cotton Tote - Solidus" =>
     {
       "Type" => "Tote",
-      "Size" => %{15" x 18" x 6"},
+      "Size" => %(15" x 18" x 6"),
       "Material" => "Canvas"
     },
     "Cotton Tote - Ruby" =>
     {
       "Type" => "Tote",
-      "Size" => %{15" x 18" x 6"},
+      "Size" => %(15" x 18" x 6"),
       "Material" => "Canvas"
     },
     "Geek Beanie" =>
@@ -95,12 +95,12 @@ products =
     "Insulated Water Bottle - Solidus" =>
     {
       "Type" => "Insulated Water Bottle",
-      "Size" => %{4.5" tall, 3.25" dia.}
+      "Size" => %(4.5" tall, 3.25" dia.)
     },
     "Insulated Water Bottle - Ruby" =>
     {
       "Type" => "Insulated Water Bottle",
-      "Size" => %{4.5" tall, 3.25" dia.}
+      "Size" => %(4.5" tall, 3.25" dia.)
     }
   }
 

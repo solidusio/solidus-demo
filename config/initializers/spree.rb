@@ -19,16 +19,14 @@ Spree.config do |config|
   # config.inventory_cache_threshold = 3
 
   # Enable Paperclip adapter for attachments on images and taxons
-  config.image_attachment_module = 'Spree::Image::PaperclipAttachment'
-  config.taxon_attachment_module = 'Spree::Taxon::PaperclipAttachment'
-
+  config.image_attachment_module = "Spree::Image::PaperclipAttachment"
+  config.taxon_attachment_module = "Spree::Taxon::PaperclipAttachment"
 
   # Permission Sets:
 
   # Uncomment and customize the following line to add custom permission sets
   # to a custom users role:
   # config.roles.assign_permissions :role_name, ['Spree::PermissionSets::CustomPermissionSet']
-
 
   # Frontend:
 
@@ -37,7 +35,6 @@ Spree.config do |config|
 
   # Template to use when rendering layout
   # config.layout = "spree/layouts/spree_application"
-
 
   # Admin:
 
@@ -61,11 +58,11 @@ Spree.config do |config|
 end
 
 SolidusStarterFrontend::Config.configure do |config|
-  config.locale = 'en'
+  config.locale = "en"
 end
 
 Spree::Backend::Config.configure do |config|
-  config.locale = 'en'
+  config.locale = "en"
 
   # Uncomment and change the following configuration if you want to add
   # a new menu item:

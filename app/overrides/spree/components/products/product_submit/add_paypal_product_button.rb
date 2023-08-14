@@ -6,5 +6,5 @@ Deface::Override.new(
   insert_bottom: "#product-price",
   original: "9897889a0aaff4f4f0c66600d7397f743d2e8bf7",
   source: :partial,
-  partial: 'solidus_paypal_commerce_platform/product/product_buttons'
+  partial: "solidus_paypal_commerce_platform/product/product_buttons"
 )

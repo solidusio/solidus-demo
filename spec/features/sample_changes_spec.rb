@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require "rails_helper"
 
-RSpec.describe 'sample changes', type: :feature do
+RSpec.describe "sample changes", type: :feature do
   let(:product) { create(:product) }
 
   before(:each) do
-    Spree::Role.create(name:"admin")
+    Spree::Role.create(name: "admin")
   end
 
   it "allows creating records on admin" do
-    visit '/admin/shipping_categories/new'
+    visit "/admin/shipping_categories/new"
 
     fill_in "Name", with: SecureRandom.hex
     click_on("commit")
@@ -39,5 +39,4 @@ RSpec.describe 'sample changes', type: :feature do
     expect(Spree::SampleChanges.unscoped.last.changed_data["name"]).to eq new_product_name
     expect(product.name).to_not eq new_product_name
   end
-
 end

@@ -10,5 +10,5 @@ Spree::OptionType.create!([
     name: "clothing-color",
     presentation: "Color",
     position: 2
-  },
+  }
 ])

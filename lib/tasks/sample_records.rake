@@ -8,7 +8,7 @@ namespace :sample_records do
     columns_to_check = [Spree::Product, Spree::Order]
 
     columns_to_check.each do |objects|
-      objects.unscoped.where.not(sample_indicator_id: nil).where('updated_at < ?', DateTime.now - days).destroy_all
+      objects.unscoped.where.not(sample_indicator_id: nil).where("updated_at < ?", DateTime.now - days).destroy_all
     end
   end
 end

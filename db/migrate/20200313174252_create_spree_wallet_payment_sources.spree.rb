@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # This migration comes from spree (originally 20160420044191)
 
 class CreateSpreeWalletPaymentSources < ActiveRecord::Migration[4.2]
@@ -8,9 +9,9 @@ class CreateSpreeWalletPaymentSources < ActiveRecord::Migration[4.2]
     create_table :spree_wallet_payment_sources do |t|
       t.references(
         :user,
-        foreign_key: { to_table: Spree.user_class.table_name },
+        foreign_key: {to_table: Spree.user_class.table_name},
         index: true,
-        null: false,
+        null: false
       )
       t.references :payment_source, polymorphic: true, null: false
       t.boolean :default, default: false, null: false
@@ -22,7 +23,7 @@ class CreateSpreeWalletPaymentSources < ActiveRecord::Migration[4.2]
       :spree_wallet_payment_sources,
       [:user_id, :payment_source_id, :payment_source_type],
       unique: true,
-      name: 'index_spree_wallet_payment_sources_on_source_and_user',
+      name: "index_spree_wallet_payment_sources_on_source_and_user"
     )
   end
 end
