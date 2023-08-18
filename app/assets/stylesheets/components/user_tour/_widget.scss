@@ -5,7 +5,20 @@
   font-size: $font-size-base;
   line-height: $line-height-base;
   background-color: $color-gray-lighter;
-  
+  padding-top: 58px;
+
+  @media (max-width: $notification-bp-medium) {
+    padding-top: 84px;
+  }
+
+  @media (max-width: $notification-bp-small) {
+    padding-top: 62px;
+  }
+
+  @media (max-width: $notification-bp-smallest) {
+    padding-top: 87px;
+  }
+
   .tour-body {
     color: $font-color-base;
     height: 0;
