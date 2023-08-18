@@ -1,0 +1,28 @@
+@import "../../variables";
+
+.notification-banner {
+  background-color: $color-orange-light;
+  color: $color-orange-text;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: $notification-padding;
+  text-align: center;
+  border-bottom: $notification-border;
+
+  a {
+    color: $color-orange-text;
+    opacity: 0.8;
+    text-decoration: underline;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: $notification-bp-small) {
+    padding: $spacer / 3;
+  }
+}
